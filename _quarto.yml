@@ -3,8 +3,8 @@ project:
   output-dir: docs
 
 website:
-  title: "Your Name"
-  description: "Personal academic website"
+  title: "Christiana F. Olusegun"
+  description: "Earth system scientist — land-atmosphere-biosphere coupling, climate extremes, and agricultural risk"
   site-url: "https://chrystali2002.github.io/personal-site"
   navbar: false
   sidebar:
@@ -38,12 +38,15 @@ website:
       - text: "Contact"
         href: contact.qmd
   page-footer:
-    left: "© {{< now year >}} Your Name"
+    left: "© {{< now year >}} Christiana F. Olusegun"
     right:
       - icon: github
         href: https://github.com/chrystali2002
+      - icon: mortarboard-fill
+        href: https://scholar.google.com/citations?user=fXtfJ38AAAAJ&hl=en
+        text: "Google Scholar"
       - icon: envelope
-        href: mailto:you@example.com
+        href: mailto:olusegu3@msu.edu
 
 format:
   html:
