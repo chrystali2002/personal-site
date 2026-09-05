@@ -26,41 +26,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -108,8 +73,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
-<script type="module" src="site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
-<link href="site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
 
 
 </head>
@@ -246,8 +209,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#map" id="toc-map" class="nav-link active" data-scroll-target="#map">Map</a></li>
-  <li><a href="#by-region" id="toc-by-region" class="nav-link" data-scroll-target="#by-region">By region</a>
+  <li><a href="#where-ive-been" id="toc-where-ive-been" class="nav-link active" data-scroll-target="#where-ive-been">Where I’ve been</a>
   <ul class="collapse">
   <li><a href="#west-africa" id="toc-west-africa" class="nav-link" data-scroll-target="#west-africa">West Africa</a></li>
   <li><a href="#brazil" id="toc-brazil" class="nav-link" data-scroll-target="#brazil">Brazil</a></li>
@@ -280,77 +242,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="map" class="level2">
-<h2 class="anchored" data-anchor-id="map">Map</h2>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb1" data-startfrom="8" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 7;"><span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>L <span class="op">=</span> <span class="pp">require</span>(<span class="st">"leaflet@1.9.4"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display">
-<div id="ojs-cell-1" data-nodetype="declaration">
-
-</div>
-</div>
-</div>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb2" data-startfrom="13" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 12;"><span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>places <span class="op">=</span> [</span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>  { <span class="dt">name</span><span class="op">:</span> <span class="st">"Abuja, Nigeria"</span><span class="op">,</span> <span class="dt">lat</span><span class="op">:</span> <span class="fl">9.0765</span><span class="op">,</span> <span class="dt">lng</span><span class="op">:</span> <span class="fl">7.3986</span><span class="op">,</span> <span class="dt">note</span><span class="op">:</span> <span class="st">"Nigeria"</span> }<span class="op">,</span></span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>  { <span class="dt">name</span><span class="op">:</span> <span class="st">"Zaria, Nigeria"</span><span class="op">,</span> <span class="dt">lat</span><span class="op">:</span> <span class="fl">11.0804</span><span class="op">,</span> <span class="dt">lng</span><span class="op">:</span> <span class="fl">7.7076</span><span class="op">,</span> <span class="dt">note</span><span class="op">:</span> <span class="st">"Nigeria"</span> }<span class="op">,</span></span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>  { <span class="dt">name</span><span class="op">:</span> <span class="st">"Kaduna, Nigeria"</span><span class="op">,</span> <span class="dt">lat</span><span class="op">:</span> <span class="fl">10.5222</span><span class="op">,</span> <span class="dt">lng</span><span class="op">:</span> <span class="fl">7.4383</span><span class="op">,</span> <span class="dt">note</span><span class="op">:</span> <span class="st">"Nigeria"</span> }<span class="op">,</span></span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>  { <span class="dt">name</span><span class="op">:</span> <span class="st">"Lagos, Nigeria"</span><span class="op">,</span> <span class="dt">lat</span><span class="op">:</span> <span class="fl">6.5244</span><span class="op">,</span> <span class="dt">lng</span><span class="op">:</span> <span class="fl">3.3792</span><span class="op">,</span> <span class="dt">note</span><span class="op">:</span> <span class="st">"Nigeria"</span> }<span class="op">,</span></span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>  { <span class="dt">name</span><span class="op">:</span> <span class="st">"Abeokuta, Ogun State, Nigeria"</span><span class="op">,</span> <span class="dt">lat</span><span class="op">:</span> <span class="fl">7.1475</span><span class="op">,</span> <span class="dt">lng</span><span class="op">:</span> <span class="fl">3.3619</span><span class="op">,</span> <span class="dt">note</span><span class="op">:</span> <span class="st">"Nigeria"</span> }<span class="op">,</span></span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>  { <span class="dt">name</span><span class="op">:</span> <span class="st">"Ibadan, Oyo State, Nigeria"</span><span class="op">,</span> <span class="dt">lat</span><span class="op">:</span> <span class="fl">7.3775</span><span class="op">,</span> <span class="dt">lng</span><span class="op">:</span> <span class="fl">3.9470</span><span class="op">,</span> <span class="dt">note</span><span class="op">:</span> <span class="st">"Nigeria"</span> }<span class="op">,</span></span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>  { <span class="dt">name</span><span class="op">:</span> <span class="st">"Osogbo, Osun State, Nigeria"</span><span class="op">,</span> <span class="dt">lat</span><span class="op">:</span> <span class="fl">7.7719</span><span class="op">,</span> <span class="dt">lng</span><span class="op">:</span> <span class="fl">4.5569</span><span class="op">,</span> <span class="dt">note</span><span class="op">:</span> <span class="st">"Nigeria"</span> }<span class="op">,</span></span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>  { <span class="dt">name</span><span class="op">:</span> <span class="st">"Enugu, Nigeria"</span><span class="op">,</span> <span class="dt">lat</span><span class="op">:</span> <span class="fl">6.5244</span><span class="op">,</span> <span class="dt">lng</span><span class="op">:</span> <span class="fl">7.5086</span><span class="op">,</span> <span class="dt">note</span><span class="op">:</span> <span class="st">"Nigeria"</span> }<span class="op">,</span></span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>  { <span class="dt">name</span><span class="op">:</span> <span class="st">"Abakaliki, Ebonyi State, Nigeria"</span><span class="op">,</span> <span class="dt">lat</span><span class="op">:</span> <span class="fl">6.3248</span><span class="op">,</span> <span class="dt">lng</span><span class="op">:</span> <span class="fl">8.1137</span><span class="op">,</span> <span class="dt">note</span><span class="op">:</span> <span class="st">"Nigeria"</span> }<span class="op">,</span></span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>  { <span class="dt">name</span><span class="op">:</span> <span class="st">"Ouagadougou, Burkina Faso"</span><span class="op">,</span> <span class="dt">lat</span><span class="op">:</span> <span class="fl">12.3714</span><span class="op">,</span> <span class="dt">lng</span><span class="op">:</span> <span class="op">-</span><span class="fl">1.5197</span><span class="op">,</span> <span class="dt">note</span><span class="op">:</span> <span class="st">"Burkina Faso"</span> }<span class="op">,</span></span>
-<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>  { <span class="dt">name</span><span class="op">:</span> <span class="st">"Accra, Ghana"</span><span class="op">,</span> <span class="dt">lat</span><span class="op">:</span> <span class="fl">5.6037</span><span class="op">,</span> <span class="dt">lng</span><span class="op">:</span> <span class="op">-</span><span class="fl">0.1870</span><span class="op">,</span> <span class="dt">note</span><span class="op">:</span> <span class="st">"Accra"</span> }<span class="op">,</span></span>
-<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>  { <span class="dt">name</span><span class="op">:</span> <span class="st">"Yaoundé, Cameroon"</span><span class="op">,</span> <span class="dt">lat</span><span class="op">:</span> <span class="fl">3.8480</span><span class="op">,</span> <span class="dt">lng</span><span class="op">:</span> <span class="fl">11.5021</span><span class="op">,</span> <span class="dt">note</span><span class="op">:</span> <span class="st">"Cameroon"</span> }<span class="op">,</span></span>
-<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>  { <span class="dt">name</span><span class="op">:</span> <span class="st">"Belo Horizonte, Minas Gerais, Brazil"</span><span class="op">,</span> <span class="dt">lat</span><span class="op">:</span> <span class="op">-</span><span class="fl">19.9167</span><span class="op">,</span> <span class="dt">lng</span><span class="op">:</span> <span class="op">-</span><span class="fl">43.9345</span><span class="op">,</span> <span class="dt">note</span><span class="op">:</span> <span class="st">"Minas Gerais"</span> }<span class="op">,</span></span>
-<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>  { <span class="dt">name</span><span class="op">:</span> <span class="st">"Rio de Janeiro, Brazil"</span><span class="op">,</span> <span class="dt">lat</span><span class="op">:</span> <span class="op">-</span><span class="fl">22.9068</span><span class="op">,</span> <span class="dt">lng</span><span class="op">:</span> <span class="op">-</span><span class="fl">43.1729</span><span class="op">,</span> <span class="dt">note</span><span class="op">:</span> <span class="st">"Rio de Janeiro"</span> }<span class="op">,</span></span>
-<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>  { <span class="dt">name</span><span class="op">:</span> <span class="st">"Brasília, Brazil"</span><span class="op">,</span> <span class="dt">lat</span><span class="op">:</span> <span class="op">-</span><span class="fl">15.8267</span><span class="op">,</span> <span class="dt">lng</span><span class="op">:</span> <span class="op">-</span><span class="fl">47.9218</span><span class="op">,</span> <span class="dt">note</span><span class="op">:</span> <span class="st">"Brasília"</span> }<span class="op">,</span></span>
-<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>  { <span class="dt">name</span><span class="op">:</span> <span class="st">"São Paulo, Brazil"</span><span class="op">,</span> <span class="dt">lat</span><span class="op">:</span> <span class="op">-</span><span class="fl">23.5505</span><span class="op">,</span> <span class="dt">lng</span><span class="op">:</span> <span class="op">-</span><span class="fl">46.6333</span><span class="op">,</span> <span class="dt">note</span><span class="op">:</span> <span class="st">"São Paulo"</span> }<span class="op">,</span></span>
-<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>  { <span class="dt">name</span><span class="op">:</span> <span class="st">"Berlin, Germany"</span><span class="op">,</span> <span class="dt">lat</span><span class="op">:</span> <span class="fl">52.5200</span><span class="op">,</span> <span class="dt">lng</span><span class="op">:</span> <span class="fl">13.4050</span><span class="op">,</span> <span class="dt">note</span><span class="op">:</span> <span class="st">"Germany"</span> }<span class="op">,</span></span>
-<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>  { <span class="dt">name</span><span class="op">:</span> <span class="st">"Munich, Germany"</span><span class="op">,</span> <span class="dt">lat</span><span class="op">:</span> <span class="fl">48.1351</span><span class="op">,</span> <span class="dt">lng</span><span class="op">:</span> <span class="fl">11.5820</span><span class="op">,</span> <span class="dt">note</span><span class="op">:</span> <span class="st">"Germany"</span> }<span class="op">,</span></span>
-<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>  { <span class="dt">name</span><span class="op">:</span> <span class="st">"Zurich, Switzerland"</span><span class="op">,</span> <span class="dt">lat</span><span class="op">:</span> <span class="fl">47.3769</span><span class="op">,</span> <span class="dt">lng</span><span class="op">:</span> <span class="fl">8.5417</span><span class="op">,</span> <span class="dt">note</span><span class="op">:</span> <span class="st">"Switzerland — update city if a different one applies"</span> }<span class="op">,</span></span>
-<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>  { <span class="dt">name</span><span class="op">:</span> <span class="st">"Warsaw, Poland"</span><span class="op">,</span> <span class="dt">lat</span><span class="op">:</span> <span class="fl">52.2297</span><span class="op">,</span> <span class="dt">lng</span><span class="op">:</span> <span class="fl">21.0122</span><span class="op">,</span> <span class="dt">note</span><span class="op">:</span> <span class="st">"Poland"</span> }<span class="op">,</span></span>
-<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>  { <span class="dt">name</span><span class="op">:</span> <span class="st">"Antalya, Turkey"</span><span class="op">,</span> <span class="dt">lat</span><span class="op">:</span> <span class="fl">36.8969</span><span class="op">,</span> <span class="dt">lng</span><span class="op">:</span> <span class="fl">30.7133</span><span class="op">,</span> <span class="dt">note</span><span class="op">:</span> <span class="st">"Turkey"</span> }<span class="op">,</span></span>
-<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>  { <span class="dt">name</span><span class="op">:</span> <span class="st">"Paris, France"</span><span class="op">,</span> <span class="dt">lat</span><span class="op">:</span> <span class="fl">48.8566</span><span class="op">,</span> <span class="dt">lng</span><span class="op">:</span> <span class="fl">2.3522</span><span class="op">,</span> <span class="dt">note</span><span class="op">:</span> <span class="st">"France — update city if a different one applies"</span> }<span class="op">,</span></span>
-<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>  { <span class="dt">name</span><span class="op">:</span> <span class="st">"Trieste, Italy"</span><span class="op">,</span> <span class="dt">lat</span><span class="op">:</span> <span class="fl">45.6495</span><span class="op">,</span> <span class="dt">lng</span><span class="op">:</span> <span class="fl">13.7768</span><span class="op">,</span> <span class="dt">note</span><span class="op">:</span> <span class="st">"Italy"</span> }<span class="op">,</span></span>
-<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>  { <span class="dt">name</span><span class="op">:</span> <span class="st">"Chennai, India"</span><span class="op">,</span> <span class="dt">lat</span><span class="op">:</span> <span class="fl">13.0827</span><span class="op">,</span> <span class="dt">lng</span><span class="op">:</span> <span class="fl">80.2707</span><span class="op">,</span> <span class="dt">note</span><span class="op">:</span> <span class="st">"India"</span> }<span class="op">,</span></span>
-<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a>  { <span class="dt">name</span><span class="op">:</span> <span class="st">"Washington, D.C., USA"</span><span class="op">,</span> <span class="dt">lat</span><span class="op">:</span> <span class="fl">38.9072</span><span class="op">,</span> <span class="dt">lng</span><span class="op">:</span> <span class="op">-</span><span class="fl">77.0369</span><span class="op">,</span> <span class="dt">note</span><span class="op">:</span> <span class="st">"Washington DC"</span> }<span class="op">,</span></span>
-<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a>  { <span class="dt">name</span><span class="op">:</span> <span class="st">"Atlanta, Georgia, USA"</span><span class="op">,</span> <span class="dt">lat</span><span class="op">:</span> <span class="fl">33.7490</span><span class="op">,</span> <span class="dt">lng</span><span class="op">:</span> <span class="op">-</span><span class="fl">84.3880</span><span class="op">,</span> <span class="dt">note</span><span class="op">:</span> <span class="st">"Georgia"</span> }<span class="op">,</span></span>
-<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>  { <span class="dt">name</span><span class="op">:</span> <span class="st">"East Lansing, Michigan, USA"</span><span class="op">,</span> <span class="dt">lat</span><span class="op">:</span> <span class="fl">42.7325</span><span class="op">,</span> <span class="dt">lng</span><span class="op">:</span> <span class="op">-</span><span class="fl">84.4838</span><span class="op">,</span> <span class="dt">note</span><span class="op">:</span> <span class="st">"Michigan"</span> }<span class="op">,</span></span>
-<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a>  { <span class="dt">name</span><span class="op">:</span> <span class="st">"Chicago, Illinois, USA"</span><span class="op">,</span> <span class="dt">lat</span><span class="op">:</span> <span class="fl">41.8781</span><span class="op">,</span> <span class="dt">lng</span><span class="op">:</span> <span class="op">-</span><span class="fl">87.6298</span><span class="op">,</span> <span class="dt">note</span><span class="op">:</span> <span class="st">"Chicago"</span> }<span class="op">,</span></span>
-<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a>  { <span class="dt">name</span><span class="op">:</span> <span class="st">"Newark, New Jersey, USA"</span><span class="op">,</span> <span class="dt">lat</span><span class="op">:</span> <span class="fl">40.7357</span><span class="op">,</span> <span class="dt">lng</span><span class="op">:</span> <span class="op">-</span><span class="fl">74.1724</span><span class="op">,</span> <span class="dt">note</span><span class="op">:</span> <span class="st">"New Jersey — update city if a different one applies"</span> }<span class="op">,</span></span>
-<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a>  { <span class="dt">name</span><span class="op">:</span> <span class="st">"Richmond, Virginia, USA"</span><span class="op">,</span> <span class="dt">lat</span><span class="op">:</span> <span class="fl">37.5407</span><span class="op">,</span> <span class="dt">lng</span><span class="op">:</span> <span class="op">-</span><span class="fl">77.4360</span><span class="op">,</span> <span class="dt">note</span><span class="op">:</span> <span class="st">"Virginia — update city if a different one applies"</span> }</span>
-<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a>  <span class="co">// add more stops here as { name, lat, lng, note }</span></span>
-<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display">
-<div id="ojs-cell-2" data-nodetype="declaration">
-
-</div>
-</div>
-</div>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb3" data-startfrom="50" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 49;"><span id="cb3-50"><a href="#cb3-50" aria-hidden="true" tabindex="-1"></a>{</span>
-<span id="cb3-51"><a href="#cb3-51" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> container <span class="op">=</span> DOM<span class="op">.</span><span class="fu">element</span>(<span class="st">"div"</span><span class="op">,</span> { <span class="dt">style</span><span class="op">:</span> <span class="st">"height:460px;border-radius:6px;"</span> })<span class="op">;</span></span>
-<span id="cb3-52"><a href="#cb3-52" aria-hidden="true" tabindex="-1"></a>  <span class="kw">yield</span> container<span class="op">;</span></span>
-<span id="cb3-53"><a href="#cb3-53" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> map <span class="op">=</span> L<span class="op">.</span><span class="fu">map</span>(container)<span class="op">.</span><span class="fu">setView</span>([<span class="dv">15</span><span class="op">,</span> <span class="dv">10</span>]<span class="op">,</span> <span class="dv">2</span>)<span class="op">;</span></span>
-<span id="cb3-54"><a href="#cb3-54" aria-hidden="true" tabindex="-1"></a>  L<span class="op">.</span><span class="fu">tileLayer</span>(<span class="st">"https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"</span><span class="op">,</span> {</span>
-<span id="cb3-55"><a href="#cb3-55" aria-hidden="true" tabindex="-1"></a>    <span class="dt">attribution</span><span class="op">:</span> <span class="st">"© OpenStreetMap contributors"</span></span>
-<span id="cb3-56"><a href="#cb3-56" aria-hidden="true" tabindex="-1"></a>  })<span class="op">.</span><span class="fu">addTo</span>(map)<span class="op">;</span></span>
-<span id="cb3-57"><a href="#cb3-57" aria-hidden="true" tabindex="-1"></a>  places<span class="op">.</span><span class="fu">forEach</span>(p <span class="kw">=&gt;</span> {</span>
-<span id="cb3-58"><a href="#cb3-58" aria-hidden="true" tabindex="-1"></a>    L<span class="op">.</span><span class="fu">marker</span>([p<span class="op">.</span><span class="at">lat</span><span class="op">,</span> p<span class="op">.</span><span class="at">lng</span>])<span class="op">.</span><span class="fu">addTo</span>(map)<span class="op">.</span><span class="fu">bindPopup</span>(<span class="vs">`&lt;b&gt;</span><span class="sc">${</span>p<span class="op">.</span><span class="at">name</span><span class="sc">}</span><span class="vs">&lt;/b&gt;&lt;br&gt;</span><span class="sc">${</span>p<span class="op">.</span><span class="at">note</span><span class="sc">}</span><span class="vs">`</span>)<span class="op">;</span></span>
-<span id="cb3-59"><a href="#cb3-59" aria-hidden="true" tabindex="-1"></a>  })<span class="op">;</span></span>
-<span id="cb3-60"><a href="#cb3-60" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display">
-<div id="ojs-cell-3" data-nodetype="expression">
-
-</div>
-</div>
-</div>
-</section>
-<section id="by-region" class="level2">
-<h2 class="anchored" data-anchor-id="by-region">By region</h2>
+<section id="where-ive-been" class="level2">
+<h2 class="anchored" data-anchor-id="where-ive-been">Where I’ve been</h2>
 <section id="west-africa" class="level3 card-block">
 <h3 class="anchored" data-anchor-id="west-africa">West Africa</h3>
 <ul>
@@ -382,17 +275,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 
 </main> <!-- /main -->
-<script type="ojs-module-contents">
-eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6IkwgPSByZXF1aXJlKFwibGVhZmxldEAxLjkuNFwiKVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0yIiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoicGxhY2VzID0gW1xuICB7IG5hbWU6IFwiQWJ1amEsIE5pZ2VyaWFcIiwgbGF0OiA5LjA3NjUsIGxuZzogNy4zOTg2LCBub3RlOiBcIk5pZ2VyaWFcIiB9LFxuICB7IG5hbWU6IFwiWmFyaWEsIE5pZ2VyaWFcIiwgbGF0OiAxMS4wODA0LCBsbmc6IDcuNzA3Niwgbm90ZTogXCJOaWdlcmlhXCIgfSxcbiAgeyBuYW1lOiBcIkthZHVuYSwgTmlnZXJpYVwiLCBsYXQ6IDEwLjUyMjIsIGxuZzogNy40MzgzLCBub3RlOiBcIk5pZ2VyaWFcIiB9LFxuICB7IG5hbWU6IFwiTGFnb3MsIE5pZ2VyaWFcIiwgbGF0OiA2LjUyNDQsIGxuZzogMy4zNzkyLCBub3RlOiBcIk5pZ2VyaWFcIiB9LFxuICB7IG5hbWU6IFwiQWJlb2t1dGEsIE9ndW4gU3RhdGUsIE5pZ2VyaWFcIiwgbGF0OiA3LjE0NzUsIGxuZzogMy4zNjE5LCBub3RlOiBcIk5pZ2VyaWFcIiB9LFxuICB7IG5hbWU6IFwiSWJhZGFuLCBPeW8gU3RhdGUsIE5pZ2VyaWFcIiwgbGF0OiA3LjM3NzUsIGxuZzogMy45NDcwLCBub3RlOiBcIk5pZ2VyaWFcIiB9LFxuICB7IG5hbWU6IFwiT3NvZ2JvLCBPc3VuIFN0YXRlLCBOaWdlcmlhXCIsIGxhdDogNy43NzE5LCBsbmc6IDQuNTU2OSwgbm90ZTogXCJOaWdlcmlhXCIgfSxcbiAgeyBuYW1lOiBcIkVudWd1LCBOaWdlcmlhXCIsIGxhdDogNi41MjQ0LCBsbmc6IDcuNTA4Niwgbm90ZTogXCJOaWdlcmlhXCIgfSxcbiAgeyBuYW1lOiBcIkFiYWthbGlraSwgRWJvbnlpIFN0YXRlLCBOaWdlcmlhXCIsIGxhdDogNi4zMjQ4LCBsbmc6IDguMTEzNywgbm90ZTogXCJOaWdlcmlhXCIgfSxcbiAgeyBuYW1lOiBcIk91YWdhZG91Z291LCBCdXJraW5hIEZhc29cIiwgbGF0OiAxMi4zNzE0LCBsbmc6IC0xLjUxOTcsIG5vdGU6IFwiQnVya2luYSBGYXNvXCIgfSxcbiAgeyBuYW1lOiBcIkFjY3JhLCBHaGFuYVwiLCBsYXQ6IDUuNjAzNywgbG5nOiAtMC4xODcwLCBub3RlOiBcIkFjY3JhXCIgfSxcbiAgeyBuYW1lOiBcIllhb3VuZMOpLCBDYW1lcm9vblwiLCBsYXQ6IDMuODQ4MCwgbG5nOiAxMS41MDIxLCBub3RlOiBcIkNhbWVyb29uXCIgfSxcbiAgeyBuYW1lOiBcIkJlbG8gSG9yaXpvbnRlLCBNaW5hcyBHZXJhaXMsIEJyYXppbFwiLCBsYXQ6IC0xOS45MTY3LCBsbmc6IC00My45MzQ1LCBub3RlOiBcIk1pbmFzIEdlcmFpc1wiIH0sXG4gIHsgbmFtZTogXCJSaW8gZGUgSmFuZWlybywgQnJhemlsXCIsIGxhdDogLTIyLjkwNjgsIGxuZzogLTQzLjE3MjksIG5vdGU6IFwiUmlvIGRlIEphbmVpcm9cIiB9LFxuICB7IG5hbWU6IFwiQnJhc8OtbGlhLCBCcmF6aWxcIiwgbGF0OiAtMTUuODI2NywgbG5nOiAtNDcuOTIxOCwgbm90ZTogXCJCcmFzw61saWFcIiB9LFxuICB7IG5hbWU6IFwiU8OjbyBQYXVsbywgQnJhemlsXCIsIGxhdDogLTIzLjU1MDUsIGxuZzogLTQ2LjYzMzMsIG5vdGU6IFwiU8OjbyBQYXVsb1wiIH0sXG4gIHsgbmFtZTogXCJCZXJsaW4sIEdlcm1hbnlcIiwgbGF0OiA1Mi41MjAwLCBsbmc6IDEzLjQwNTAsIG5vdGU6IFwiR2VybWFueVwiIH0sXG4gIHsgbmFtZTogXCJNdW5pY2gsIEdlcm1hbnlcIiwgbGF0OiA0OC4xMzUxLCBsbmc6IDExLjU4MjAsIG5vdGU6IFwiR2VybWFueVwiIH0sXG4gIHsgbmFtZTogXCJadXJpY2gsIFN3aXR6ZXJsYW5kXCIsIGxhdDogNDcuMzc2OSwgbG5nOiA4LjU0MTcsIG5vdGU6IFwiU3dpdHplcmxhbmQg4oCUIHVwZGF0ZSBjaXR5IGlmIGEgZGlmZmVyZW50IG9uZSBhcHBsaWVzXCIgfSxcbiAgeyBuYW1lOiBcIldhcnNhdywgUG9sYW5kXCIsIGxhdDogNTIuMjI5NywgbG5nOiAyMS4wMTIyLCBub3RlOiBcIlBvbGFuZFwiIH0sXG4gIHsgbmFtZTogXCJBbnRhbHlhLCBUdXJrZXlcIiwgbGF0OiAzNi44OTY5LCBsbmc6IDMwLjcxMzMsIG5vdGU6IFwiVHVya2V5XCIgfSxcbiAgeyBuYW1lOiBcIlBhcmlzLCBGcmFuY2VcIiwgbGF0OiA0OC44NTY2LCBsbmc6IDIuMzUyMiwgbm90ZTogXCJGcmFuY2Ug4oCUIHVwZGF0ZSBjaXR5IGlmIGEgZGlmZmVyZW50IG9uZSBhcHBsaWVzXCIgfSxcbiAgeyBuYW1lOiBcIlRyaWVzdGUsIEl0YWx5XCIsIGxhdDogNDUuNjQ5NSwgbG5nOiAxMy43NzY4LCBub3RlOiBcIkl0YWx5XCIgfSxcbiAgeyBuYW1lOiBcIkNoZW5uYWksIEluZGlhXCIsIGxhdDogMTMuMDgyNywgbG5nOiA4MC4yNzA3LCBub3RlOiBcIkluZGlhXCIgfSxcbiAgeyBuYW1lOiBcIldhc2hpbmd0b24sIEQuQy4sIFVTQVwiLCBsYXQ6IDM4LjkwNzIsIGxuZzogLTc3LjAzNjksIG5vdGU6IFwiV2FzaGluZ3RvbiBEQ1wiIH0sXG4gIHsgbmFtZTogXCJBdGxhbnRhLCBHZW9yZ2lhLCBVU0FcIiwgbGF0OiAzMy43NDkwLCBsbmc6IC04NC4zODgwLCBub3RlOiBcIkdlb3JnaWFcIiB9LFxuICB7IG5hbWU6IFwiRWFzdCBMYW5zaW5nLCBNaWNoaWdhbiwgVVNBXCIsIGxhdDogNDIuNzMyNSwgbG5nOiAtODQuNDgzOCwgbm90ZTogXCJNaWNoaWdhblwiIH0sXG4gIHsgbmFtZTogXCJDaGljYWdvLCBJbGxpbm9pcywgVVNBXCIsIGxhdDogNDEuODc4MSwgbG5nOiAtODcuNjI5OCwgbm90ZTogXCJDaGljYWdvXCIgfSxcbiAgeyBuYW1lOiBcIk5ld2FyaywgTmV3IEplcnNleSwgVVNBXCIsIGxhdDogNDAuNzM1NywgbG5nOiAtNzQuMTcyNCwgbm90ZTogXCJOZXcgSmVyc2V5IOKAlCB1cGRhdGUgY2l0eSBpZiBhIGRpZmZlcmVudCBvbmUgYXBwbGllc1wiIH0sXG4gIHsgbmFtZTogXCJSaWNobW9uZCwgVmlyZ2luaWEsIFVTQVwiLCBsYXQ6IDM3LjU0MDcsIGxuZzogLTc3LjQzNjAsIG5vdGU6IFwiVmlyZ2luaWEg4oCUIHVwZGF0ZSBjaXR5IGlmIGEgZGlmZmVyZW50IG9uZSBhcHBsaWVzXCIgfVxuICAvLyBhZGQgbW9yZSBzdG9wcyBoZXJlIGFzIHsgbmFtZSwgbGF0LCBsbmcsIG5vdGUgfVxuXVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0zIiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoie1xuICBjb25zdCBjb250YWluZXIgPSBET00uZWxlbWVudChcImRpdlwiLCB7IHN0eWxlOiBcImhlaWdodDo0NjBweDtib3JkZXItcmFkaXVzOjZweDtcIiB9KTtcbiAgeWllbGQgY29udGFpbmVyO1xuICBjb25zdCBtYXAgPSBMLm1hcChjb250YWluZXIpLnNldFZpZXcoWzE1LCAxMF0sIDIpO1xuICBMLnRpbGVMYXllcihcImh0dHBzOi8ve3N9LnRpbGUub3BlbnN0cmVldG1hcC5vcmcve3p9L3t4fS97eX0ucG5nXCIsIHtcbiAgICBhdHRyaWJ1dGlvbjogXCLCqSBPcGVuU3RyZWV0TWFwIGNvbnRyaWJ1dG9yc1wiXG4gIH0pLmFkZFRvKG1hcCk7XG4gIHBsYWNlcy5mb3JFYWNoKHAgPT4ge1xuICAgIEwubWFya2VyKFtwLmxhdCwgcC5sbmddKS5hZGRUbyhtYXApLmJpbmRQb3B1cChgPGI+JHtwLm5hbWV9PC9iPjxicj4ke3Aubm90ZX1gKTtcbiAgfSk7XG59XG4ifV19
-</script>
-<script type="module">
-if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
-window._ojs.paths.runtimeToDoc = "../..";
-window._ojs.paths.runtimeToRoot = "../..";
-window._ojs.paths.docToRoot = "";
-window._ojs.selfContained = false;
-window._ojs.runtime.interpretFromScriptTags();
-</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
