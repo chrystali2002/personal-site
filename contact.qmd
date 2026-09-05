@@ -2,9 +2,13 @@
 title: "Contact"
 ---
 
-- **Email:** [you@example.com](mailto:you@example.com)
+- **Email:** [olusegu3@msu.edu](mailto:olusegu3@msu.edu)
 - **GitHub:** [@chrystali2002](https://github.com/chrystali2002)
-- **LinkedIn:** [Your profile](#)
+- **Google Scholar:** [Profile](https://scholar.google.com/citations?user=fXtfJ38AAAAJ&hl=en)
+- **ORCID:** [0000-0001-7208-0095](https://orcid.org/0000-0001-7208-0095)
+
+Department of Earth and Environmental Sciences, Michigan State University,
+East Lansing, MI 48824
 
 If you're reaching out about ASCENDE Network specifically, use
 [ascende26@gmail.com](mailto:ascende26@gmail.com) instead.
