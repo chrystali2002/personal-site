@@ -198,6 +198,26 @@
     ]
   },
   {
+    "objectID": "about.html#research-interests",
+    "href": "about.html#research-interests",
+    "title": "About",
+    "section": "Research interests",
+    "text": "Research interests\nA simple question drives me: how does our changing climate, especially its extremes, affect the way we live and work? To answer this, I use a combination of climate models, remote sensing, field observation, statistics, and machine learning. My goal is to cut through the complexity and provide clear, actionable insights that build resilience — from the food we grow and the air we breathe to the energy we use.\nKey areas of expertise:\n\nClimate modeling & analysis — Developing and analyzing simulations using regional models (WRF, RegCM4) and large ensembles (CMIP6, CORDEX-CORE) for robust geospatial diagnostics\nClimate data science — Leveraging Python, R, and MATLAB, alongside geospatial tools (ArcGIS, ArcPy), for processing and analyzing large-scale atmospheric datasets\nApplied climate impacts — Researching land–atmosphere interactions, climate–agriculture relationships, and building data-driven frameworks for environmental resilience",
+    "crumbs": [
+      "About"
+    ]
+  },
+  {
+    "objectID": "about.html#career-objective",
+    "href": "about.html#career-objective",
+    "title": "About",
+    "section": "Career objective",
+    "text": "Career objective\nI’m currently seeking a permanent position — in academia, industry, or the public sector — where I can put data analysis, Earth system modeling, and machine learning to work on problems that directly improve livelihoods, whether in established sectors like agriculture and water management or in emerging data-driven fields tackling climate and environmental risk. I’m drawn to roles where research translates quickly into decisions, tools, or policy that people actually use.\nI’m a Nigerian citizen and I’m authorized to work in the United States.",
+    "crumbs": [
+      "About"
+    ]
+  },
+  {
     "objectID": "about.html#current-position",
     "href": "about.html#current-position",
     "title": "About",
