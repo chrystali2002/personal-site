@@ -171,37 +171,67 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "Write your fuller bio here — education, current role, research/professional focus, and the throughline connecting your work. This is the page that gives context to everything else on the site.",
+    "text": "I’m an Earth system scientist studying how the atmosphere, land surface, and terrestrial biosphere interact as a coupled system, and how that coupling shapes risk to agriculture, water resources, and ecosystems under a changing climate. I integrate regional-to-continental Earth system models (RegCM4, WRF, WRF-Hydro, and the Community Land Model), CMIP6 and CORDEX-CORE multi-model ensembles, statistical extremes analysis, and machine learning to study land–atmosphere–biosphere feedbacks and compound climate hazards across West Africa and the continental United States.\nMy work connects mechanistic Earth system modeling to concrete consequences for food systems, water resources, and ecosystem resilience — including impacts on species and natural systems beyond the human systems most directly studied. I’m building an independent research program centered on vegetation–climate coupling and compound extremes, with the goal of extending this integrated systems approach to new regions and research questions.",
     "crumbs": [
       "About"
     ]
   },
   {
-    "objectID": "about.html#background",
-    "href": "about.html#background",
+    "objectID": "about.html#research-profile",
+    "href": "about.html#research-profile",
     "title": "About",
     "section": "",
-    "text": "Write your fuller bio here — education, current role, research/professional focus, and the throughline connecting your work. This is the page that gives context to everything else on the site.",
+    "text": "I’m an Earth system scientist studying how the atmosphere, land surface, and terrestrial biosphere interact as a coupled system, and how that coupling shapes risk to agriculture, water resources, and ecosystems under a changing climate. I integrate regional-to-continental Earth system models (RegCM4, WRF, WRF-Hydro, and the Community Land Model), CMIP6 and CORDEX-CORE multi-model ensembles, statistical extremes analysis, and machine learning to study land–atmosphere–biosphere feedbacks and compound climate hazards across West Africa and the continental United States.\nMy work connects mechanistic Earth system modeling to concrete consequences for food systems, water resources, and ecosystem resilience — including impacts on species and natural systems beyond the human systems most directly studied. I’m building an independent research program centered on vegetation–climate coupling and compound extremes, with the goal of extending this integrated systems approach to new regions and research questions.",
     "crumbs": [
       "About"
     ]
   },
   {
-    "objectID": "about.html#current-focus",
-    "href": "about.html#current-focus",
+    "objectID": "about.html#current-position",
+    "href": "about.html#current-position",
     "title": "About",
-    "section": "Current focus",
-    "text": "Current focus\n\nWhat you’re actively working on right now\nAny community or mentorship work (e.g. ASCENDE Network)\nWhat you’re learning or exploring",
+    "section": "Current position",
+    "text": "Current position\nPostdoctoral Research Scholar, Department of Earth & Environmental Sciences, Michigan State University (January 2024 – Present)\n\nLead research integrating climate and hydrological data for agricultural modeling at country, regional, and global scales using CMIP6 and CORDEX simulations\nApply machine learning (CNN, LSTM) and geospatial analytics to assess natural hazard impacts on food and environmental systems\nDevelop and maintain scalable data pipelines translating complex climate data into actionable insight for interdisciplinary teams\nConvening Chair, AGU 2026 Session GC013: “AI-Ensemble Modeling of Weather Extremes on Agricultural Production Systems”\nCo-convened AGU sessions on African hydrology and hydroclimatology for three consecutive years (AGU24, AGU25, AGU26)",
     "crumbs": [
       "About"
     ]
   },
   {
-    "objectID": "about.html#cv-resume",
-    "href": "about.html#cv-resume",
+    "objectID": "about.html#academic-path",
+    "href": "about.html#academic-path",
     "title": "About",
-    "section": "CV / Resume",
-    "text": "CV / Resume\nIf you’d like a downloadable CV, drop the PDF into a files/ folder and link it here, e.g. Download CV (PDF).",
+    "section": "Academic path",
+    "text": "Academic path\n\nWest African Science Service Center on Climate Change and Adapted Land Use (WASCAL) — Akure, Nigeria Research Fellow & Co-Principal Investigator · January 2021 – December 2024\nCo-led the BMBF-funded CONCERT project on greenhouse gas emissions and mitigation under climate and land-use change in West Africa, using a coupled WRF/WRF-Hydro Earth system model alongside eddy-covariance flux measurements. Taught postgraduate courses in statistical meteorology, hydrological modeling, and natural hazard assessment.\n\n\nUniversity of Warsaw, Institute of Geophysics — Warsaw, Poland Visiting Scientist / Technical Specialist · August 2021 – March 2022\nAir quality assessment using field measurements, lidar remote sensing (ADR-PollyXT), and data-driven analytical approaches.\n\n\nKarlsruhe Institute of Technology (KIT — IMK-IFU) — Garmisch-Partenkirchen, Germany Postdoctoral Research Scholar · September 2016 – September 2017\nProduced high-resolution WRF (12 km) and CLM climate simulations for the WASCAL project. Key contributor to the WASCAL ensemble dataset published in Earth System Science Data.\n\n(Full appointment history — including NASRDA, University of Cape Town, and early teaching roles at FUTA and Elizade University — is available in my CV or on ORCID.)",
+    "crumbs": [
+      "About"
+    ]
+  },
+  {
+    "objectID": "about.html#education",
+    "href": "about.html#education",
+    "title": "About",
+    "section": "Education",
+    "text": "Education\n\nPh.D., Meteorology and Climate Science — Federal University of Technology, Akure (FUTA), Nigeria (2013–2016). Thesis: Investigating Land Cover Types for Mitigating Climate Change Impacts in West Africa. Funded by a BMBF Doctoral Scholarship.\nM.Sc., Physics (Space Physics) — FUTA, Nigeria (2010–2012)\nB.Tech. (Hons.), Meteorology — FUTA, Nigeria (2001–2006)",
+    "crumbs": [
+      "About"
+    ]
+  },
+  {
+    "objectID": "about.html#current-focus-beyond-research",
+    "href": "about.html#current-focus-beyond-research",
+    "title": "About",
+    "section": "Current focus beyond research",
+    "text": "Current focus beyond research\n\nFounder & Director, ASCENDE Network — a global, women-centered mentorship community connecting early-career climate scientists across Africa, Europe, and North America\nAssociate Editor, Air Quality, Atmosphere and Health (Springer Nature), 2025–present\nPeer reviewer for International Journal of Climatology, Environmental Research Letters, GeoHealth, and several other journals",
+    "crumbs": [
+      "About"
+    ]
+  },
+  {
+    "objectID": "about.html#elsewhere",
+    "href": "about.html#elsewhere",
+    "title": "About",
+    "section": "Elsewhere",
+    "text": "Elsewhere\n\nGoogle Scholar\nORCID: 0000-0001-7208-0095\nGitHub",
     "crumbs": [
       "About"
     ]
