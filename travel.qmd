@@ -12,10 +12,15 @@ L = require("leaflet@1.9.4")
 ```{ojs}
 //| echo: false
 places = [
-  { name: "Abuja, Nigeria", lat: 9.0765, lng: 7.3986, note: "Nigeria — north" },
-  { name: "Zaria, Nigeria", lat: 11.0804, lng: 7.7076, note: "Nigeria — north" },
-  { name: "Kaduna, Nigeria", lat: 10.5222, lng: 7.4383, note: "Nigeria — north" },
-  { name: "Lagos, Nigeria", lat: 6.5244, lng: 3.3792, note: "Nigeria — south" },
+  { name: "Abuja, Nigeria", lat: 9.0765, lng: 7.3986, note: "Nigeria" },
+  { name: "Zaria, Nigeria", lat: 11.0804, lng: 7.7076, note: "Nigeria" },
+  { name: "Kaduna, Nigeria", lat: 10.5222, lng: 7.4383, note: "Nigeria" },
+  { name: "Lagos, Nigeria", lat: 6.5244, lng: 3.3792, note: "Nigeria" },
+  { name: "Abeokuta, Ogun State, Nigeria", lat: 7.1475, lng: 3.3619, note: "Nigeria" },
+  { name: "Ibadan, Oyo State, Nigeria", lat: 7.3775, lng: 3.9470, note: "Nigeria" },
+  { name: "Osogbo, Osun State, Nigeria", lat: 7.7719, lng: 4.5569, note: "Nigeria" },
+  { name: "Enugu, Nigeria", lat: 6.5244, lng: 7.5086, note: "Nigeria" },
+  { name: "Abakaliki, Ebonyi State, Nigeria", lat: 6.3248, lng: 8.1137, note: "Nigeria" },
   { name: "Ouagadougou, Burkina Faso", lat: 12.3714, lng: -1.5197, note: "Burkina Faso" },
   { name: "Accra, Ghana", lat: 5.6037, lng: -0.1870, note: "Accra" },
   { name: "Yaoundé, Cameroon", lat: 3.8480, lng: 11.5021, note: "Cameroon" },
@@ -26,7 +31,11 @@ places = [
   { name: "Berlin, Germany", lat: 52.5200, lng: 13.4050, note: "Germany" },
   { name: "Munich, Germany", lat: 48.1351, lng: 11.5820, note: "Germany" },
   { name: "Zurich, Switzerland", lat: 47.3769, lng: 8.5417, note: "Switzerland — update city if a different one applies" },
-  { name: "Warsaw, Poland", lat: 52.2297, lng: 21.0122, note: "Poland — visiting scientist, University of Warsaw" },
+  { name: "Warsaw, Poland", lat: 52.2297, lng: 21.0122, note: "Poland" },
+  { name: "Antalya, Turkey", lat: 36.8969, lng: 30.7133, note: "Turkey" },
+  { name: "Paris, France", lat: 48.8566, lng: 2.3522, note: "France — update city if a different one applies" },
+  { name: "Trieste, Italy", lat: 45.6495, lng: 13.7768, note: "Italy" },
+  { name: "Chennai, India", lat: 13.0827, lng: 80.2707, note: "India" },
   { name: "Washington, D.C., USA", lat: 38.9072, lng: -77.0369, note: "Washington DC" },
   { name: "Atlanta, Georgia, USA", lat: 33.7490, lng: -84.3880, note: "Georgia" },
   { name: "East Lansing, Michigan, USA", lat: 42.7325, lng: -84.4838, note: "Michigan" },
@@ -56,8 +65,11 @@ places = [
 
 ::: {.card-block}
 ### West Africa
-**Nigeria** — North: Abuja, Zaria, Kaduna · South: Lagos
-Burkina Faso · Accra, Ghana · Cameroon
+
+- **Nigeria:** Abuja · Zaria · Kaduna · Lagos · Abeokuta (Ogun State) · Ibadan (Oyo State) · Osogbo (Osun State) · Enugu · Abakaliki (Ebonyi State)
+- Burkina Faso
+- Accra, Ghana
+- Cameroon
 :::
 
 ::: {.card-block}
@@ -67,7 +79,12 @@ Minas Gerais · Rio de Janeiro · Brasília · São Paulo
 
 ::: {.card-block}
 ### Europe
-Berlin & Munich, Germany · Switzerland · Poland (Warsaw — visiting scientist, University of Warsaw)
+Berlin & Munich, Germany · Switzerland · Poland (Warsaw) · Turkey (Antalya) · France · Trieste, Italy
+:::
+
+::: {.card-block}
+### Asia
+Chennai, India
 :::
 
 ::: {.card-block}
@@ -75,5 +92,15 @@ Berlin & Munich, Germany · Switzerland · Poland (Warsaw — visiting scientist
 Washington, D.C. · Atlanta, GA · Michigan · Chicago, IL · New Jersey · Virginia
 :::
 
-*Add a short story, dates, or photos to any of these — turn a region card into
-a full trip write-up whenever you're ready.*
+I will add a short story, dates, and photos to each of these once I'm able to
+retrieve them — turning this section into a proper travelogue rather than
+just a list of pins. In the meantime, what I can say is this: every one of
+these places has taught me something. Working and traveling across such
+different corners of the world — from research stations in West Africa to
+conference halls in Europe, from field sites in Brazil to a new life in the
+United States — has meant constantly encountering people whose experiences,
+assumptions, and ways of solving problems look nothing like my own. That
+exposure has shaped how I think as a scientist just as much as any dataset
+or model has: it's taught me to ask better questions, hold my conclusions
+a little more loosely, and stay curious about perspectives I haven't
+considered yet.
