@@ -4,9 +4,6 @@ title: "Travel"
 
 ## Map
 
-Add a pin for each place you've been by editing the `places` array below —
-each entry just needs a name, lat/lng, and a short note.
-
 ```{ojs}
 //| echo: false
 L = require("leaflet@1.9.4")
@@ -15,17 +12,37 @@ L = require("leaflet@1.9.4")
 ```{ojs}
 //| echo: false
 places = [
-  { name: "Example City, Country", lat: 0, lng: 0, note: "What you did there, when" }
-  // add more entries here
+  { name: "Abuja, Nigeria", lat: 9.0765, lng: 7.3986, note: "Nigeria — north" },
+  { name: "Zaria, Nigeria", lat: 11.0804, lng: 7.7076, note: "Nigeria — north" },
+  { name: "Kaduna, Nigeria", lat: 10.5222, lng: 7.4383, note: "Nigeria — north" },
+  { name: "Lagos, Nigeria", lat: 6.5244, lng: 3.3792, note: "Nigeria — south" },
+  { name: "Ouagadougou, Burkina Faso", lat: 12.3714, lng: -1.5197, note: "Burkina Faso" },
+  { name: "Accra, Ghana", lat: 5.6037, lng: -0.1870, note: "Accra" },
+  { name: "Yaoundé, Cameroon", lat: 3.8480, lng: 11.5021, note: "Cameroon" },
+  { name: "Belo Horizonte, Minas Gerais, Brazil", lat: -19.9167, lng: -43.9345, note: "Minas Gerais" },
+  { name: "Rio de Janeiro, Brazil", lat: -22.9068, lng: -43.1729, note: "Rio de Janeiro" },
+  { name: "Brasília, Brazil", lat: -15.8267, lng: -47.9218, note: "Brasília" },
+  { name: "São Paulo, Brazil", lat: -23.5505, lng: -46.6333, note: "São Paulo" },
+  { name: "Berlin, Germany", lat: 52.5200, lng: 13.4050, note: "Germany" },
+  { name: "Munich, Germany", lat: 48.1351, lng: 11.5820, note: "Germany" },
+  { name: "Zurich, Switzerland", lat: 47.3769, lng: 8.5417, note: "Switzerland — update city if a different one applies" },
+  { name: "Warsaw, Poland", lat: 52.2297, lng: 21.0122, note: "Poland — visiting scientist, University of Warsaw" },
+  { name: "Washington, D.C., USA", lat: 38.9072, lng: -77.0369, note: "Washington DC" },
+  { name: "Atlanta, Georgia, USA", lat: 33.7490, lng: -84.3880, note: "Georgia" },
+  { name: "East Lansing, Michigan, USA", lat: 42.7325, lng: -84.4838, note: "Michigan" },
+  { name: "Chicago, Illinois, USA", lat: 41.8781, lng: -87.6298, note: "Chicago" },
+  { name: "Newark, New Jersey, USA", lat: 40.7357, lng: -74.1724, note: "New Jersey — update city if a different one applies" },
+  { name: "Richmond, Virginia, USA", lat: 37.5407, lng: -77.4360, note: "Virginia — update city if a different one applies" }
+  // add more stops here as { name, lat, lng, note }
 ]
 ```
 
 ```{ojs}
 //| echo: false
 {
-  const container = DOM.element("div", { style: "height:420px;border-radius:6px;" });
+  const container = DOM.element("div", { style: "height:460px;border-radius:6px;" });
   yield container;
-  const map = L.map(container).setView([20, 0], 2);
+  const map = L.map(container).setView([15, 10], 2);
   L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
     attribution: "© OpenStreetMap contributors"
   }).addTo(map);
@@ -35,9 +52,28 @@ places = [
 }
 ```
 
-## By trip
+## By region
 
 ::: {.card-block}
-### [Trip name / destination]
-Dates, a photo or two, and a short story about the trip.
+### West Africa
+**Nigeria** — North: Abuja, Zaria, Kaduna · South: Lagos
+Burkina Faso · Accra, Ghana · Cameroon
 :::
+
+::: {.card-block}
+### Brazil
+Minas Gerais · Rio de Janeiro · Brasília · São Paulo
+:::
+
+::: {.card-block}
+### Europe
+Berlin & Munich, Germany · Switzerland · Poland (Warsaw — visiting scientist, University of Warsaw)
+:::
+
+::: {.card-block}
+### United States
+Washington, D.C. · Atlanta, GA · Michigan · Chicago, IL · New Jersey · Virginia
+:::
+
+*Add a short story, dates, or photos to any of these — turn a region card into
+a full trip write-up whenever you're ready.*
