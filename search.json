@@ -1,0 +1,203 @@
+[
+  {
+    "objectID": "travel.html",
+    "href": "travel.html",
+    "title": "Travel",
+    "section": "",
+    "text": "Add a pin for each place you’ve been by editing the places array below — each entry just needs a name, lat/lng, and a short note.\n\nL = require(\"leaflet@1.9.4\")\n\n\n\n\n\n\n\nplaces = [\n  { name: \"Example City, Country\", lat: 0, lng: 0, note: \"What you did there, when\" }\n  // add more entries here\n]\n\n\n\n\n\n\n\n{\n  const container = DOM.element(\"div\", { style: \"height:420px;border-radius:6px;\" });\n  yield container;\n  const map = L.map(container).setView([20, 0], 2);\n  L.tileLayer(\"https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png\", {\n    attribution: \"© OpenStreetMap contributors\"\n  }).addTo(map);\n  places.forEach(p =&gt; {\n    L.marker([p.lat, p.lng]).addTo(map).bindPopup(`&lt;b&gt;${p.name}&lt;/b&gt;&lt;br&gt;${p.note}`);\n  });\n}",
+    "crumbs": [
+      "Beyond Work",
+      "Travel"
+    ]
+  },
+  {
+    "objectID": "travel.html#map",
+    "href": "travel.html#map",
+    "title": "Travel",
+    "section": "",
+    "text": "Add a pin for each place you’ve been by editing the places array below — each entry just needs a name, lat/lng, and a short note.\n\nL = require(\"leaflet@1.9.4\")\n\n\n\n\n\n\n\nplaces = [\n  { name: \"Example City, Country\", lat: 0, lng: 0, note: \"What you did there, when\" }\n  // add more entries here\n]\n\n\n\n\n\n\n\n{\n  const container = DOM.element(\"div\", { style: \"height:420px;border-radius:6px;\" });\n  yield container;\n  const map = L.map(container).setView([20, 0], 2);\n  L.tileLayer(\"https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png\", {\n    attribution: \"© OpenStreetMap contributors\"\n  }).addTo(map);\n  places.forEach(p =&gt; {\n    L.marker([p.lat, p.lng]).addTo(map).bindPopup(`&lt;b&gt;${p.name}&lt;/b&gt;&lt;br&gt;${p.note}`);\n  });\n}",
+    "crumbs": [
+      "Beyond Work",
+      "Travel"
+    ]
+  },
+  {
+    "objectID": "travel.html#by-trip",
+    "href": "travel.html#by-trip",
+    "title": "Travel",
+    "section": "By trip",
+    "text": "By trip\n\n[Trip name / destination]\nDates, a photo or two, and a short story about the trip.",
+    "crumbs": [
+      "Beyond Work",
+      "Travel"
+    ]
+  },
+  {
+    "objectID": "hobbies.html",
+    "href": "hobbies.html",
+    "title": "Hobbies",
+    "section": "",
+    "text": "[Hobby] — a line or two on what draws you to it, how long you’ve done it\n[Hobby] — same",
+    "crumbs": [
+      "Beyond Work",
+      "Hobbies"
+    ]
+  },
+  {
+    "objectID": "hobbies.html#now",
+    "href": "hobbies.html#now",
+    "title": "Hobbies",
+    "section": "",
+    "text": "[Hobby] — a line or two on what draws you to it, how long you’ve done it\n[Hobby] — same",
+    "crumbs": [
+      "Beyond Work",
+      "Hobbies"
+    ]
+  },
+  {
+    "objectID": "hobbies.html#then",
+    "href": "hobbies.html#then",
+    "title": "Hobbies",
+    "section": "Then",
+    "text": "Then\n\n[Past hobby] — what it was, roughly when, why it faded (or didn’t, just changed form)\n[Past hobby] — same\n\nFeel free to add photos inline for any of these with ![Caption](path/to/image.jpg).",
+    "crumbs": [
+      "Beyond Work",
+      "Hobbies"
+    ]
+  },
+  {
+    "objectID": "contact.html",
+    "href": "contact.html",
+    "title": "Contact",
+    "section": "",
+    "text": "Email: you@example.com\nGitHub: @chrystali2002\nLinkedIn: Your profile\n\nIf you’re reaching out about ASCENDE Network specifically, use ascende26@gmail.com instead.",
+    "crumbs": [
+      "Contact"
+    ]
+  },
+  {
+    "objectID": "grants.html",
+    "href": "grants.html",
+    "title": "Grants & Funding",
+    "section": "",
+    "text": "Grants and funded projects\n\n\nYear\nTitle\nFunder\nRole\nAmount\n\n\n\n\n2026\nExample grant title\nExample Foundation\nPI\n$10,000\n\n\n2025\nAnother example grant\nExample Agency\nCo-PI\n$5,000\n\n\n\nReplace the rows above with your actual grants. Add a Notes column if you want a link to project outcomes or reports.",
+    "crumbs": [
+      "Work",
+      "Grants"
+    ]
+  },
+  {
+    "objectID": "publications.html",
+    "href": "publications.html",
+    "title": "Publications",
+    "section": "",
+    "text": "All publications are listed below, most recent first. Sourced automatically from publications.bib — to add a new paper, just add a BibTeX entry to that file and re-render.\n\n\nName, Y., & Coauthor, S. (2024). An example publication title. Journal or Conference Name, 1, 1–10. https://example.com/paper",
+    "crumbs": [
+      "Work",
+      "Publications"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Your Name",
+    "section": "",
+    "text": "A short paragraph introducing yourself — your field, your current role or focus, and what you’re working on. Two or three sentences is plenty here; the About page can go deeper.\nRead more about me →",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#what-im-working-on",
+    "href": "index.html#what-im-working-on",
+    "title": "Your Name",
+    "section": "What I’m working on",
+    "text": "What I’m working on\n\n[Featured project or toolkit name]\nShort description of your most important current project — e.g. the Olusegun Python Toolkit, or ASCENDE Network. Link out to the project page or repo.\nPythonOpen Source",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#latest-from-the-blog",
+    "href": "index.html#latest-from-the-blog",
+    "title": "Your Name",
+    "section": "Latest from the blog",
+    "text": "Latest from the blog\n(This section can later be replaced with an auto-generated listing — see blog/index.qmd.)\n\nFirst post title — one-line teaser",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Projects",
+    "section": "",
+    "text": "Olusegun Python Toolkit\nA plug-and-play offline Python/Jupyter/ML environment bundling pandas, NumPy, Matplotlib, PyTorch, TensorFlow, and more — built for users with limited internet access.\nPythonJupyterOffline-first\nView on GitHub →\n\n\nASCENDE Network\nA women-centered empowerment and mentorship community running monthly virtual hangouts, connecting entrepreneurs, professionals, and students.\nCommunityMentorship\nVisit the site →\n\n\n[Next project]\nShort description. What it does, why it matters, what tech it uses.\nTag\nLink →",
+    "crumbs": [
+      "Work",
+      "Projects"
+    ]
+  },
+  {
+    "objectID": "repositories.html",
+    "href": "repositories.html",
+    "title": "Repositories",
+    "section": "",
+    "text": "Live list of public repositories, pulled directly from GitHub — this page updates itself automatically as you create or update repos, no manual edits needed.\n\nrepos = {\n  const res = await fetch(\"https://api.github.com/users/chrystali2002/repos?sort=updated&per_page=100\");\n  const data = await res.json();\n  return data.filter(r =&gt; !r.fork).sort((a, b) =&gt; b.stargazers_count - a.stargazers_count);\n}\n\n\n\n\n\n\n\nhtml`${repos.map(r =&gt; `\n  &lt;div class=\"card-block\"&gt;\n    &lt;h3&gt;&lt;a href=\"${r.html_url}\" target=\"_blank\"&gt;${r.name}&lt;/a&gt;&lt;/h3&gt;\n    &lt;p&gt;${r.description ?? \"No description provided.\"}&lt;/p&gt;\n    &lt;span class=\"pill\"&gt;${r.language ?? \"—\"}&lt;/span&gt;\n    &lt;span class=\"pill\"&gt;★ ${r.stargazers_count}&lt;/span&gt;\n    &lt;span class=\"pill\"&gt;Updated ${new Date(r.updated_at).toLocaleDateString()}&lt;/span&gt;\n  &lt;/div&gt;\n`).join(\"\")}`\n\n\n\n\n\n\nIf this list doesn’t load (e.g. viewing offline), see the static project highlights instead.",
+    "crumbs": [
+      "Work",
+      "Repositories"
+    ]
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "Write your fuller bio here — education, current role, research/professional focus, and the throughline connecting your work. This is the page that gives context to everything else on the site.",
+    "crumbs": [
+      "About"
+    ]
+  },
+  {
+    "objectID": "about.html#background",
+    "href": "about.html#background",
+    "title": "About",
+    "section": "",
+    "text": "Write your fuller bio here — education, current role, research/professional focus, and the throughline connecting your work. This is the page that gives context to everything else on the site.",
+    "crumbs": [
+      "About"
+    ]
+  },
+  {
+    "objectID": "about.html#current-focus",
+    "href": "about.html#current-focus",
+    "title": "About",
+    "section": "Current focus",
+    "text": "Current focus\n\nWhat you’re actively working on right now\nAny community or mentorship work (e.g. ASCENDE Network)\nWhat you’re learning or exploring",
+    "crumbs": [
+      "About"
+    ]
+  },
+  {
+    "objectID": "about.html#cv-resume",
+    "href": "about.html#cv-resume",
+    "title": "About",
+    "section": "CV / Resume",
+    "text": "CV / Resume\nIf you’d like a downloadable CV, drop the PDF into a files/ folder and link it here, e.g. Download CV (PDF).",
+    "crumbs": [
+      "About"
+    ]
+  },
+  {
+    "objectID": "photos.html",
+    "href": "photos.html",
+    "title": "Photos",
+    "section": "",
+    "text": "Drop your images into an images/ folder and reference them below. Quarto’s layout-ncol lays them out in an even grid automatically.\n\n\n\n\n\n\nCaption one\n\n\n\n\n\n\n\nCaption two\n\n\n\n\n\n\n\nCaption three\n\n\n\n\n\nTip: for a lightbox (click-to-enlarge) effect, add the quarto-lightbox extension later with quarto add quarto-ext/lightbox.",
+    "crumbs": [
+      "Beyond Work",
+      "Photos"
+    ]
+  }
+]
