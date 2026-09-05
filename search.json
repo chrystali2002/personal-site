@@ -76,25 +76,35 @@
     ]
   },
   {
-    "objectID": "repositories.html",
-    "href": "repositories.html",
-    "title": "Repositories",
+    "objectID": "blog/index.html",
+    "href": "blog/index.html",
+    "title": "Blog",
     "section": "",
-    "text": "Live list of public repositories, pulled directly from GitHub — this page updates itself automatically as you create or update repos, no manual edits needed.\n\nrepos = {\n  const res = await fetch(\"https://api.github.com/users/chrystali2002/repos?sort=updated&per_page=100\");\n  const data = await res.json();\n  return data.filter(r =&gt; !r.fork).sort((a, b) =&gt; b.stargazers_count - a.stargazers_count);\n}\n\n\n\n\n\n\n\nhtml`${repos.map(r =&gt; `\n  &lt;div class=\"card-block\"&gt;\n    &lt;h3&gt;&lt;a href=\"${r.html_url}\" target=\"_blank\"&gt;${r.name}&lt;/a&gt;&lt;/h3&gt;\n    &lt;p&gt;${r.description ?? \"No description provided.\"}&lt;/p&gt;\n    &lt;span class=\"pill\"&gt;${r.language ?? \"—\"}&lt;/span&gt;\n    &lt;span class=\"pill\"&gt;★ ${r.stargazers_count}&lt;/span&gt;\n    &lt;span class=\"pill\"&gt;Updated ${new Date(r.updated_at).toLocaleDateString()}&lt;/span&gt;\n  &lt;/div&gt;\n`).join(\"\")}`\n\n\n\n\n\n\nIf this list doesn’t load (e.g. viewing offline), see the static project highlights instead.",
+    "text": "Welcome to the blog\n\n\nA short one-line teaser that shows up in the blog listing.\n\n\n\n\n\nSep 5, 2026\n\n1 min\n\n\n\n\nNo matching items",
     "crumbs": [
-      "Work",
-      "Repositories"
+      "Blog"
     ]
   },
   {
-    "objectID": "projects.html",
-    "href": "projects.html",
-    "title": "Projects",
+    "objectID": "grants.html",
+    "href": "grants.html",
+    "title": "Grants & Funding",
     "section": "",
-    "text": "Olusegun Python Toolkit\nA plug-and-play offline Python/Jupyter/ML environment bundling pandas, NumPy, Matplotlib, PyTorch, TensorFlow, and more — built for users with limited internet access.\nPythonJupyterOffline-first\nView on GitHub →\n\n\nASCENDE Network\nA women-centered empowerment and mentorship community running monthly virtual hangouts, connecting entrepreneurs, professionals, and students.\nCommunityMentorship\nVisit the site →\n\n\n[Next project]\nShort description. What it does, why it matters, what tech it uses.\nTag\nLink →",
+    "text": "Grants and funded projects\n\n\nYear\nTitle\nFunder\nRole\nAmount\n\n\n\n\n2026\nExample grant title\nExample Foundation\nPI\n$10,000\n\n\n2025\nAnother example grant\nExample Agency\nCo-PI\n$5,000\n\n\n\nReplace the rows above with your actual grants. Add a Notes column if you want a link to project outcomes or reports.",
     "crumbs": [
       "Work",
-      "Projects"
+      "Grants"
+    ]
+  },
+  {
+    "objectID": "publications.html",
+    "href": "publications.html",
+    "title": "Publications",
+    "section": "",
+    "text": "All publications are listed below, most recent first. Sourced automatically from publications.bib — to add a new paper, just add a BibTeX entry to that file and re-render.\n\n\nName, Y., & Coauthor, S. (2024). An example publication title. Journal or Conference Name, 1, 1–10. https://example.com/paper",
+    "crumbs": [
+      "Work",
+      "Publications"
     ]
   },
   {
@@ -128,25 +138,25 @@
     ]
   },
   {
-    "objectID": "publications.html",
-    "href": "publications.html",
-    "title": "Publications",
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Projects",
     "section": "",
-    "text": "All publications are listed below, most recent first. Sourced automatically from publications.bib — to add a new paper, just add a BibTeX entry to that file and re-render.\n\n\nName, Y., & Coauthor, S. (2024). An example publication title. Journal or Conference Name, 1, 1–10. https://example.com/paper",
+    "text": "Olusegun Python Toolkit\nA plug-and-play offline Python/Jupyter/ML environment bundling pandas, NumPy, Matplotlib, PyTorch, TensorFlow, and more — built for users with limited internet access.\nPythonJupyterOffline-first\nView on GitHub →\n\n\nASCENDE Network\nA women-centered empowerment and mentorship community running monthly virtual hangouts, connecting entrepreneurs, professionals, and students.\nCommunityMentorship\nVisit the site →\n\n\n[Next project]\nShort description. What it does, why it matters, what tech it uses.\nTag\nLink →",
     "crumbs": [
       "Work",
-      "Publications"
+      "Projects"
     ]
   },
   {
-    "objectID": "grants.html",
-    "href": "grants.html",
-    "title": "Grants & Funding",
+    "objectID": "repositories.html",
+    "href": "repositories.html",
+    "title": "Repositories",
     "section": "",
-    "text": "Grants and funded projects\n\n\nYear\nTitle\nFunder\nRole\nAmount\n\n\n\n\n2026\nExample grant title\nExample Foundation\nPI\n$10,000\n\n\n2025\nAnother example grant\nExample Agency\nCo-PI\n$5,000\n\n\n\nReplace the rows above with your actual grants. Add a Notes column if you want a link to project outcomes or reports.",
+    "text": "Live list of public repositories, pulled directly from GitHub — this page updates itself automatically as you create or update repos, no manual edits needed.\n\nrepos = {\n  const res = await fetch(\"https://api.github.com/users/chrystali2002/repos?sort=updated&per_page=100\");\n  const data = await res.json();\n  return data.filter(r =&gt; !r.fork).sort((a, b) =&gt; b.stargazers_count - a.stargazers_count);\n}\n\n\n\n\n\n\n\nhtml`${repos.map(r =&gt; `\n  &lt;div class=\"card-block\"&gt;\n    &lt;h3&gt;&lt;a href=\"${r.html_url}\" target=\"_blank\"&gt;${r.name}&lt;/a&gt;&lt;/h3&gt;\n    &lt;p&gt;${r.description ?? \"No description provided.\"}&lt;/p&gt;\n    &lt;span class=\"pill\"&gt;${r.language ?? \"—\"}&lt;/span&gt;\n    &lt;span class=\"pill\"&gt;★ ${r.stargazers_count}&lt;/span&gt;\n    &lt;span class=\"pill\"&gt;Updated ${new Date(r.updated_at).toLocaleDateString()}&lt;/span&gt;\n  &lt;/div&gt;\n`).join(\"\")}`\n\n\n\n\n\n\nIf this list doesn’t load (e.g. viewing offline), see the static project highlights instead.",
     "crumbs": [
       "Work",
-      "Grants"
+      "Repositories"
     ]
   },
   {
