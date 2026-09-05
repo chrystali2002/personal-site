@@ -1,28 +1,56 @@
 ---
-title: "Your Name"
-subtitle: "Short one-line description of what you do"
+title: "Christiana F. Olusegun"
+subtitle: "Earth system scientist — land, atmosphere & biosphere under a changing climate"
 page-layout: full
 toc: false
 ---
 
 ::: {.card-block}
-### Hi, I'm [Your Name] 👋
+### Hi, I'm Christiana 👋
 
-A short paragraph introducing yourself — your field, your current role or focus,
-and what you're working on. Two or three sentences is plenty here; the About
-page can go deeper.
+I'm a Postdoctoral Research Scholar in the Department of Earth and
+Environmental Sciences at Michigan State University. I study how the
+atmosphere, land surface, and terrestrial biosphere interact as a coupled
+system — and how that coupling shapes risk to agriculture, water resources,
+and ecosystems as the climate changes. I work across regional-to-continental
+Earth system models (RegCM4, WRF, WRF-Hydro, CLM), CMIP6/CORDEX-CORE
+ensembles, and machine learning, with a geographic focus spanning West Africa
+and the continental United States.
 
-[Read more about me →](about.qmd)
+[Read more about my research →](about.qmd)
 :::
 
 ## What I'm working on
 
 ::: {.card-block}
-### [Featured project or toolkit name]
-Short description of your most important current project — e.g. the Olusegun
-Python Toolkit, or ASCENDE Network. Link out to the project page or repo.
+### Vegetation–climate coupling & compound extremes
+Building an independent research program connecting mechanistic Earth system
+modeling to concrete consequences for food systems, water resources, and
+ecosystem resilience.
 
-<span class="pill">Python</span><span class="pill">Open Source</span>
+<span class="pill">CMIP6</span><span class="pill">CORDEX-CORE</span><span class="pill">Machine Learning</span>
+:::
+
+::: {.card-block}
+### Olusegun Python Toolkit
+An offline, plug-and-play Python/Jupyter/ML environment (pandas, NumPy,
+PyTorch, TensorFlow, and more) built so members of the ASCENDE Network with
+limited internet access can complete climate-relevant coding exercises.
+
+<span class="pill">Python</span><span class="pill">Open Source</span><span class="pill">Offline-first</span>
+
+[View on GitHub →](https://github.com/chrystali2002/Olusegun-Python-Toolkit)
+:::
+
+::: {.card-block}
+### ASCENDE Network
+A global, women-centered mentorship community connecting early-career climate
+scientists across Africa, Europe, and North America through monthly virtual
+hangouts.
+
+<span class="pill">Community</span><span class="pill">Mentorship</span>
+
+[Visit the site →](https://chrystali2002.github.io/ascende-network)
 :::
 
 ## Latest from the blog
@@ -30,4 +58,4 @@ Python Toolkit, or ASCENDE Network. Link out to the project page or repo.
 *(This section can later be replaced with an auto-generated listing —
 see `blog/index.qmd`.)*
 
-- [First post title](blog/posts/welcome/index.qmd) — one-line teaser
+- [Welcome to the blog](blog/posts/welcome/index.qmd) — first post placeholder
