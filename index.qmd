@@ -20,6 +20,22 @@ and the continental United States.
 [Read more about my research →](about.qmd)
 :::
 
+::: {.callout-note appearance="simple" icon=false}
+## Open to opportunities
+
+I'm seeking a permanent position where I can apply data analysis, Earth
+system modeling, and machine learning to problems with direct, measurable
+impact on livelihoods — across established and emerging sectors, from
+agriculture and water resources to climate risk and food security. I bring
+a decade of experience turning complex climate and geospatial data into
+decisions that matter, and I like building tools that make research usable
+well beyond the lab.
+
+I'm a Nigerian citizen and I'm authorized to work in the United States.
+
+[Get in touch →](contact.qmd)
+:::
+
 ## What I'm working on
 
 ::: {.card-block}
