@@ -3,19 +3,96 @@ title: "About"
 toc: true
 ---
 
-## Background
+## Research profile
 
-Write your fuller bio here — education, current role, research/professional
-focus, and the throughline connecting your work. This is the page that gives
-context to everything else on the site.
+I'm an Earth system scientist studying how the atmosphere, land surface, and
+terrestrial biosphere interact as a coupled system, and how that coupling
+shapes risk to agriculture, water resources, and ecosystems under a changing
+climate. I integrate regional-to-continental Earth system models (RegCM4,
+WRF, WRF-Hydro, and the Community Land Model), CMIP6 and CORDEX-CORE
+multi-model ensembles, statistical extremes analysis, and machine learning to
+study land–atmosphere–biosphere feedbacks and compound climate hazards
+across West Africa and the continental United States.
 
-## Current focus
+My work connects mechanistic Earth system modeling to concrete consequences
+for food systems, water resources, and ecosystem resilience — including
+impacts on species and natural systems beyond the human systems most directly
+studied. I'm building an independent research program centered on
+vegetation–climate coupling and compound extremes, with the goal of extending
+this integrated systems approach to new regions and research questions.
 
-- What you're actively working on right now
-- Any community or mentorship work (e.g. ASCENDE Network)
-- What you're learning or exploring
+## Current position
 
-## CV / Resume
+**Postdoctoral Research Scholar**, Department of Earth & Environmental
+Sciences, Michigan State University (January 2024 – Present)
 
-If you'd like a downloadable CV, drop the PDF into a `files/` folder and link
-it here, e.g. [Download CV (PDF)](files/cv.pdf).
+- Lead research integrating climate and hydrological data for agricultural
+  modeling at country, regional, and global scales using CMIP6 and CORDEX
+  simulations
+- Apply machine learning (CNN, LSTM) and geospatial analytics to assess
+  natural hazard impacts on food and environmental systems
+- Develop and maintain scalable data pipelines translating complex climate
+  data into actionable insight for interdisciplinary teams
+- Convening Chair, AGU 2026 Session GC013: "AI-Ensemble Modeling of Weather
+  Extremes on Agricultural Production Systems"
+- Co-convened AGU sessions on African hydrology and hydroclimatology for
+  three consecutive years (AGU24, AGU25, AGU26)
+
+## Academic path
+
+::: {.card-block}
+**West African Science Service Center on Climate Change and Adapted Land Use
+(WASCAL)** — Akure, Nigeria
+*Research Fellow & Co-Principal Investigator* · January 2021 – December 2024
+
+Co-led the BMBF-funded CONCERT project on greenhouse gas emissions and
+mitigation under climate and land-use change in West Africa, using a coupled
+WRF/WRF-Hydro Earth system model alongside eddy-covariance flux measurements.
+Taught postgraduate courses in statistical meteorology, hydrological
+modeling, and natural hazard assessment.
+:::
+
+::: {.card-block}
+**University of Warsaw, Institute of Geophysics** — Warsaw, Poland
+*Visiting Scientist / Technical Specialist* · August 2021 – March 2022
+
+Air quality assessment using field measurements, lidar remote sensing
+(ADR-PollyXT), and data-driven analytical approaches.
+:::
+
+::: {.card-block}
+**Karlsruhe Institute of Technology (KIT — IMK-IFU)** — Garmisch-Partenkirchen, Germany
+*Postdoctoral Research Scholar* · September 2016 – September 2017
+
+Produced high-resolution WRF (12 km) and CLM climate simulations for the
+WASCAL project. Key contributor to the WASCAL ensemble dataset published in
+*Earth System Science Data*.
+:::
+
+*(Full appointment history — including NASRDA, University of Cape Town, and
+early teaching roles at FUTA and Elizade University — is available in my
+[CV](#) or on [ORCID](https://orcid.org/0000-0001-7208-0095).)*
+
+## Education
+
+- **Ph.D., Meteorology and Climate Science** — Federal University of
+  Technology, Akure (FUTA), Nigeria (2013–2016). Thesis: *Investigating Land
+  Cover Types for Mitigating Climate Change Impacts in West Africa*. Funded
+  by a BMBF Doctoral Scholarship.
+- **M.Sc., Physics (Space Physics)** — FUTA, Nigeria (2010–2012)
+- **B.Tech. (Hons.), Meteorology** — FUTA, Nigeria (2001–2006)
+
+## Current focus beyond research
+
+- **Founder & Director, [ASCENDE Network](https://chrystali2002.github.io/ascende-network)** —
+  a global, women-centered mentorship community connecting early-career
+  climate scientists across Africa, Europe, and North America
+- **Associate Editor**, *Air Quality, Atmosphere and Health* (Springer Nature), 2025–present
+- Peer reviewer for *International Journal of Climatology*, *Environmental
+  Research Letters*, *GeoHealth*, and several other journals
+
+## Elsewhere
+
+- [Google Scholar](https://scholar.google.com/citations?user=fXtfJ38AAAAJ&hl=en)
+- [ORCID: 0000-0001-7208-0095](https://orcid.org/0000-0001-7208-0095)
+- [GitHub](https://github.com/chrystali2002)
