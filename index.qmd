@@ -1,0 +1,33 @@
+---
+title: "Your Name"
+subtitle: "Short one-line description of what you do"
+page-layout: full
+toc: false
+---
+
+::: {.card-block}
+### Hi, I'm [Your Name] 👋
+
+A short paragraph introducing yourself — your field, your current role or focus,
+and what you're working on. Two or three sentences is plenty here; the About
+page can go deeper.
+
+[Read more about me →](about.qmd)
+:::
+
+## What I'm working on
+
+::: {.card-block}
+### [Featured project or toolkit name]
+Short description of your most important current project — e.g. the Olusegun
+Python Toolkit, or ASCENDE Network. Link out to the project page or repo.
+
+<span class="pill">Python</span><span class="pill">Open Source</span>
+:::
+
+## Latest from the blog
+
+*(This section can later be replaced with an auto-generated listing —
+see `blog/index.qmd`.)*
+
+- [First post title](blog/posts/welcome/index.qmd) — one-line teaser

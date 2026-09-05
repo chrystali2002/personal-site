@@ -1,0 +1,17 @@
+---
+title: "Photos"
+---
+
+Drop your images into an `images/` folder and reference them below. Quarto's
+`layout-ncol` lays them out in an even grid automatically.
+
+::: {layout-ncol="3"}
+![Caption one](images/placeholder1.jpg)
+
+![Caption two](images/placeholder2.jpg)
+
+![Caption three](images/placeholder3.jpg)
+:::
+
+*Tip: for a lightbox (click-to-enlarge) effect, add the `quarto-lightbox`
+extension later with `quarto add quarto-ext/lightbox`.*

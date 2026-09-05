@@ -1,0 +1,33 @@
+---
+title: "Projects"
+---
+
+::: {.card-block}
+### Olusegun Python Toolkit
+A plug-and-play offline Python/Jupyter/ML environment bundling pandas, NumPy,
+Matplotlib, PyTorch, TensorFlow, and more — built for users with limited
+internet access.
+
+<span class="pill">Python</span><span class="pill">Jupyter</span><span class="pill">Offline-first</span>
+
+[View on GitHub →](https://github.com/chrystali2002/Olusegun-Python-Toolkit)
+:::
+
+::: {.card-block}
+### ASCENDE Network
+A women-centered empowerment and mentorship community running monthly virtual
+hangouts, connecting entrepreneurs, professionals, and students.
+
+<span class="pill">Community</span><span class="pill">Mentorship</span>
+
+[Visit the site →](https://chrystali2002.github.io/ascende-network)
+:::
+
+::: {.card-block}
+### [Next project]
+Short description. What it does, why it matters, what tech it uses.
+
+<span class="pill">Tag</span>
+
+[Link →](#)
+:::

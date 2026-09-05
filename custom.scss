@@ -1,0 +1,108 @@
+/*-- scss:defaults --*/
+
+// Palette
+$paper:      #F6F5F1;  // warm-neutral background, not stark white
+$ink:        #1C2321;  // near-black, warm undertone
+$muted:      #5B6560;  // secondary text
+$border:     #DEDCD3;
+$accent:     #2F6F62;  // deep juniper green — primary accent
+$accent-2:   #A8792E;  // muted ochre — sparing secondary highlight (tags, hover)
+
+$body-bg: $paper;
+$body-color: $ink;
+$link-color: $accent;
+
+// Type: IBM Plex family across serif/sans/mono — one systematic choice
+// that reads as intentional for someone whose work spans research writing
+// and code (Serif for headings/reading, Sans for UI text, Mono for code).
+$font-family-serif: "IBM Plex Serif", Georgia, serif;
+$font-family-sans-serif: "IBM Plex Sans", -apple-system, sans-serif;
+$font-family-monospace: "IBM Plex Mono", monospace;
+
+$headings-font-family: $font-family-serif;
+$headings-font-weight: 500;
+$font-size-base: 1.05rem;
+$line-height-base: 1.65;
+
+$toc-font-size: 0.85rem;
+$sidebar-font-size: 0.95rem;
+
+/*-- scss:rules --*/
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+body {
+  letter-spacing: 0.1px;
+}
+
+h1, h2, h3 {
+  color: $ink;
+  letter-spacing: -0.01em;
+}
+
+h1.title {
+  font-weight: 600;
+  border-bottom: 2px solid $accent;
+  padding-bottom: 0.4rem;
+  display: inline-block;
+}
+
+a {
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+a:hover {
+  color: $accent-2;
+}
+
+.sidebar-navigation .sidebar-item {
+  font-family: $font-family-sans-serif;
+}
+
+.sidebar-navigation .sidebar-section > .sidebar-item .sidebar-item-text {
+  font-weight: 500;
+  color: $muted;
+  font-size: 0.8rem;
+  text-transform: none;
+}
+
+// Tag / pill styling used on projects, repos, publications
+.pill {
+  display: inline-block;
+  font-family: $font-family-sans-serif;
+  font-size: 0.75rem;
+  padding: 0.15rem 0.6rem;
+  border: 1px solid $border;
+  border-radius: 999px;
+  color: $muted;
+  margin: 0 0.3rem 0.3rem 0;
+}
+
+.pill:hover {
+  border-color: $accent-2;
+  color: $accent-2;
+}
+
+// Card used for projects/repos/hobbies listings
+.card-block {
+  border: 1px solid $border;
+  border-radius: 6px;
+  padding: 1.1rem 1.3rem;
+  margin-bottom: 1.2rem;
+  background: color-mix(in srgb, $paper 96%, white);
+}
+
+.card-block h3 {
+  margin-top: 0;
+  font-size: 1.15rem;
+}
+
+blockquote {
+  border-left: 3px solid $accent;
+  color: $muted;
+}
+
+code {
+  color: $accent;
+}

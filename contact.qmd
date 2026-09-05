@@ -1,0 +1,10 @@
+---
+title: "Contact"
+---
+
+- **Email:** [you@example.com](mailto:you@example.com)
+- **GitHub:** [@chrystali2002](https://github.com/chrystali2002)
+- **LinkedIn:** [Your profile](#)
+
+If you're reaching out about ASCENDE Network specifically, use
+[ascende26@gmail.com](mailto:ascende26@gmail.com) instead.

@@ -1,0 +1,43 @@
+---
+title: "Travel"
+---
+
+## Map
+
+Add a pin for each place you've been by editing the `places` array below —
+each entry just needs a name, lat/lng, and a short note.
+
+```{ojs}
+//| echo: false
+L = require("leaflet@1.9.4")
+```
+
+```{ojs}
+//| echo: false
+places = [
+  { name: "Example City, Country", lat: 0, lng: 0, note: "What you did there, when" }
+  // add more entries here
+]
+```
+
+```{ojs}
+//| echo: false
+{
+  const container = DOM.element("div", { style: "height:420px;border-radius:6px;" });
+  yield container;
+  const map = L.map(container).setView([20, 0], 2);
+  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    attribution: "© OpenStreetMap contributors"
+  }).addTo(map);
+  places.forEach(p => {
+    L.marker([p.lat, p.lng]).addTo(map).bindPopup(`<b>${p.name}</b><br>${p.note}`);
+  });
+}
+```
+
+## By trip
+
+::: {.card-block}
+### [Trip name / destination]
+Dates, a photo or two, and a short story about the trip.
+:::

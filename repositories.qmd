@@ -1,0 +1,31 @@
+---
+title: "Repositories"
+---
+
+Live list of public repositories, pulled directly from GitHub — this page
+updates itself automatically as you create or update repos, no manual edits
+needed.
+
+```{ojs}
+//| echo: false
+repos = {
+  const res = await fetch("https://api.github.com/users/chrystali2002/repos?sort=updated&per_page=100");
+  const data = await res.json();
+  return data.filter(r => !r.fork).sort((a, b) => b.stargazers_count - a.stargazers_count);
+}
+```
+
+```{ojs}
+//| echo: false
+html`${repos.map(r => `
+  <div class="card-block">
+    <h3><a href="${r.html_url}" target="_blank">${r.name}</a></h3>
+    <p>${r.description ?? "No description provided."}</p>
+    <span class="pill">${r.language ?? "—"}</span>
+    <span class="pill">★ ${r.stargazers_count}</span>
+    <span class="pill">Updated ${new Date(r.updated_at).toLocaleDateString()}</span>
+  </div>
+`).join("")}`
+```
+
+*If this list doesn't load (e.g. viewing offline), see the [static project highlights](projects.qmd) instead.*

@@ -1,0 +1,60 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Your Name"
+  description: "Personal academic website"
+  site-url: "https://chrystali2002.github.io/personal-site"
+  navbar: false
+  sidebar:
+    style: "floating"
+    search: true
+    contents:
+      - text: "Home"
+        href: index.qmd
+      - text: "About"
+        href: about.qmd
+      - section: "Work"
+        contents:
+          - text: "Publications"
+            href: publications.qmd
+          - text: "Grants"
+            href: grants.qmd
+          - text: "Projects"
+            href: projects.qmd
+          - text: "Repositories"
+            href: repositories.qmd
+      - text: "Blog"
+        href: blog/index.qmd
+      - section: "Beyond Work"
+        contents:
+          - text: "Hobbies"
+            href: hobbies.qmd
+          - text: "Travel"
+            href: travel.qmd
+          - text: "Photos"
+            href: photos.qmd
+      - text: "Contact"
+        href: contact.qmd
+  page-footer:
+    left: "© {{< now year >}} Your Name"
+    right:
+      - icon: github
+        href: https://github.com/chrystali2002
+      - icon: envelope
+        href: mailto:you@example.com
+
+format:
+  html:
+    theme:
+      - cosmo
+      - custom.scss
+    toc: true
+    grid:
+      sidebar-width: 260px
+      body-width: 850px
+      margin-width: 220px
+
+execute:
+  freeze: auto

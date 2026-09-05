@@ -1,0 +1,21 @@
+---
+title: "About"
+toc: true
+---
+
+## Background
+
+Write your fuller bio here — education, current role, research/professional
+focus, and the throughline connecting your work. This is the page that gives
+context to everything else on the site.
+
+## Current focus
+
+- What you're actively working on right now
+- Any community or mentorship work (e.g. ASCENDE Network)
+- What you're learning or exploring
+
+## CV / Resume
+
+If you'd like a downloadable CV, drop the PDF into a `files/` folder and link
+it here, e.g. [Download CV (PDF)](files/cv.pdf).

@@ -1,0 +1,15 @@
+---
+title: "Hobbies"
+---
+
+## Now
+
+- **[Hobby]** — a line or two on what draws you to it, how long you've done it
+- **[Hobby]** — same
+
+## Then
+
+- **[Past hobby]** — what it was, roughly when, why it faded (or didn't, just changed form)
+- **[Past hobby]** — same
+
+*Feel free to add photos inline for any of these with `![Caption](path/to/image.jpg)`.*

@@ -1,0 +1,14 @@
+---
+title: "Publications"
+bibliography: publications.bib
+nocite: |
+  @*
+csl: https://raw.githubusercontent.com/citation-style-language/styles/master/apa.csl
+---
+
+All publications are listed below, most recent first. Sourced automatically
+from `publications.bib` — to add a new paper, just add a BibTeX entry to that
+file and re-render.
+
+::: {#refs}
+:::
