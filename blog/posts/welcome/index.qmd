@@ -1,7 +1,7 @@
 
 ---
 title: "Welcome to the blog"
-description: "A short one-line teaser that shows up in the blog listing."
+description: "Welcome to my personal website. This blog highlights research questions, experiments, and ideas that I investigate out of curiosity. Some may never become published studies, but they are still meaningful explorations that deserve to be documented. Research is something I genuinely enjoy, both professionally and as a hobby."
 date: 2026-09-05
 categories: [announcement]
 ---
