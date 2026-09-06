@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2026-09-06">
+<meta name="description" content="A controlled test over US croplands, and what a null result taught me about scale.">
 
-<title>Blog – Christiana F. Olusegun</title>
+<title>Does correcting irrigation in satellite soil moisture improve drought forecasts? – Christiana F. Olusegun</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -29,25 +31,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<script src="../site_libs/quarto-listing/list.min.js"></script>
-<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-fc6e5c1d973041ca1a9cf4d4c136f86c.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-e1d8064c19537215e52dc59e6900cac8.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-fc6e5c1d973041ca1a9cf4d4c136f86c.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-e1d8064c19537215e52dc59e6900cac8.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -75,65 +75,7 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-description','listing-reading-time',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 </head>
 
@@ -146,7 +88,9 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../blog/index.html">Blog</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
+      Christiana F. Olusegun
+      </li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -156,12 +100,12 @@ window.Quarto = {
   </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="../">Christiana F. Olusegun</a> 
+      <a href="../../../">Christiana F. Olusegun</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -173,13 +117,13 @@ window.Quarto = {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Home</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../about.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../about.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">About</span></a>
   </div>
 </li>
@@ -194,25 +138,25 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../publications.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../publications.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Publications</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../grants.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../grants.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Grants</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../projects.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../projects.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Projects</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../repositories.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../repositories.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Repositories</span></a>
   </div>
 </li>
@@ -220,7 +164,7 @@ window.Quarto = {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../blog/index.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../../blog/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Blog</span></a>
   </div>
 </li>
@@ -235,19 +179,19 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../hobbies.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../hobbies.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Hobbies</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../travel.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../travel.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Travel</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../photos.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../photos.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Photos</span></a>
   </div>
 </li>
@@ -255,7 +199,7 @@ window.Quarto = {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../contact.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../contact.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Contact</span></a>
   </div>
 </li>
@@ -265,21 +209,49 @@ window.Quarto = {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(2)</span></div><div class="category" data-category="YW5ub3VuY2VtZW50">announcement <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ZGVlcCUyMGxlYXJuaW5n">deep learning <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ZHJvdWdodA==">drought <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cmVtb3RlJTIwc2Vuc2luZw==">remote sensing <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cmVzZWFyY2g=">research <span class="quarto-category-count">(1)</span></div></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#what-i-built" id="toc-what-i-built" class="nav-link active" data-scroll-target="#what-i-built">What I built</a></li>
+  <li><a href="#the-experiment" id="toc-the-experiment" class="nav-link" data-scroll-target="#the-experiment">The experiment</a></li>
+  <li><a href="#the-answer-mostly" id="toc-the-answer-mostly" class="nav-link" data-scroll-target="#the-answer-mostly">The answer, mostly</a></li>
+  <li><a href="#except-where-irrigation-dominates" id="toc-except-where-irrigation-dominates" class="nav-link" data-scroll-target="#except-where-irrigation-dominates">Except where irrigation dominates</a></li>
+  <li><a href="#what-i-would-tell-someone-repeating-this" id="toc-what-i-would-tell-someone-repeating-this" class="nav-link" data-scroll-target="#what-i-would-tell-someone-repeating-this">What I would tell someone repeating this</a></li>
+  <li><a href="#where-this-goes" id="toc-where-this-goes" class="nav-link" data-scroll-target="#where-this-goes">Where this goes</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<main class="content column-body" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Blog</h1>
+<h1 class="title">Does correcting irrigation in satellite soil moisture improve drought forecasts?</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">research</div>
+    <div class="quarto-category">drought</div>
+    <div class="quarto-category">remote sensing</div>
+    <div class="quarto-category">deep learning</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    A controlled test over US croplands, and what a null result taught me about scale.
+  </div>
 </div>
 
 
-
-<div class="quarto-title-meta column-body">
+<div class="quarto-title-meta">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">September 6, 2026</p>
+    </div>
+  </div>
   
     
   </div>
@@ -289,51 +261,107 @@ window.Quarto = {
 </header>
 
 
+<p>Satellite soil moisture is one of the best predictors we have for how vegetation will respond to drought weeks in advance. Water in the root zone drains slowly, so today’s soil moisture carries information about next month’s plant stress. That memory is why soil moisture appears in most sub-seasonal drought forecasting systems.</p>
+<p>But there is a problem in farmland. Irrigation wets the soil without rain. A satellite sees moist soil and reports no drought, while the atmosphere above is bone dry. In principle a forecasting model trained on that data learns the wrong relationship: it sees soil moisture staying high through a drought and concludes that vegetation should be fine.</p>
+<p>That reasoning is widely accepted. Le et al.&nbsp;(2024) forecast vegetation greenness across US croplands from SMAP soil moisture, found their forecasts performed worse in irrigated than rainfed fields, and flagged irrigation contamination as a limitation worth correcting in future work.</p>
+<p>Nobody had tested it. So I did.</p>
+<section id="what-i-built" class="level2">
+<h2 class="anchored" data-anchor-id="what-i-built">What I built</h2>
+<p>A ConvLSTM — a neural network that learns patterns across space and time at once — that forecasts vegetation drought across the water-limited croplands of the contiguous United States, 8 to 40 days ahead.</p>
+<!-- FIGURE 1 — domain map.
+     The 3,093-cell domain shaded by irrigated fraction, with the aridity
+     boundary drawn. Orients the reader before any results appear. -->
+<div id="fig-domain" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-domain-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="domain_map.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-domain-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: The study domain: 3,093 cells across semi-arid US cropland, shaded by irrigated fraction from the Landsat-based Irrigation Dataset.
+</figcaption>
+</figure>
+</div>
+<p>The inputs are SMAP Level-4 root-zone soil moisture, MODIS NIRv (a vegetation index tied closely to photosynthesis), irrigated fraction from the Landsat-based Irrigation Dataset, and three climate indices. The target is the NIRv anomaly — how far vegetation sits from normal for that place and time of year.</p>
+<p>Trained on 2015–2021, validated on 2022, tested on a completely held-out 2023–2024. Anomaly correlation of 0.50 averaged across lead times, 0.66 at eight days, and a 23% reduction in error against climatology.</p>
+<!-- FIGURE 2 — skill vs lead time.
+     ACC against lead for the full model and the NIRv-only baseline, with a
+     shaded band for the spread across 15 seeds. The "it works" figure. -->
+<div id="fig-skill" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-skill-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="skill_vs_lead.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-skill-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Forecast skill declines with lead time, as expected. Shading shows the spread across 15 random initialisations.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="the-experiment" class="level2">
+<h2 class="anchored" data-anchor-id="the-experiment">The experiment</h2>
+<p>To test whether the irrigation correction matters, I trained the same model twice and changed exactly one thing.</p>
+<p>The corrected version receives soil moisture with the irrigation signal removed: for every irrigated cell, I estimate how much wetter it is than its rainfed surroundings and subtract that excess, scaled by how much of the cell is irrigated. The uncorrected version receives the raw signal. Same architecture, same splits, same random seeds, same everything else.</p>
+<p>Because the seeds are shared, the two runs are paired. The question is not “is version A better than version B on average” but “for each seed, does correcting the input change the answer?” That pairing matters more than it might seem — with only 298 training samples, the variation between random initialisations is about the same size as the effect I was looking for.</p>
+<p>I also scored three groups of pixels separately: irrigated cells, where the correction acts; rainfed cells, where the two versions receive <em>identical</em> input and any difference is pure noise; and the whole domain.</p>
+<p>The rainfed group is the important one. It gives an empirical noise floor. If the difference on irrigated pixels is the same size as the difference on pixels that cannot possibly respond, there is nothing there.</p>
+</section>
+<section id="the-answer-mostly" class="level2">
+<h2 class="anchored" data-anchor-id="the-answer-mostly">The answer, mostly</h2>
+<p>Nothing. Across the whole domain, and across all irrigated pixels, the difference in forecast skill was indistinguishable from zero at every lead time. The rainfed control showed differences of the same magnitude — which is what you would expect if you are measuring noise.</p>
+<!-- FIGURE 3 — paired comparison.
+     dACC against lead time, one line per mask, with confidence intervals. The
+     visual point is that irrigated and rainfed sit on top of each other. -->
+<div id="fig-dacc" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-dacc-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="dacc_by_mask.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-dacc-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Change in skill from irrigation correction. Irrigated and rainfed pixels behave almost identically — and rainfed pixels receive identical input in both runs, so their difference is pure initialisation noise.
+</figcaption>
+</figure>
+</div>
+<p>The reason turns out to be scale. The correction is small: on average it shifts soil moisture by 0.036 standard deviations, and on 52% of irrigated pixel-timesteps it does nothing at all. At 9 km resolution, a cell that is 25% irrigated is still 75% rainfed by area. The irrigation signal is real, but it is diluted by everything else in the pixel.</p>
+</section>
+<section id="except-where-irrigation-dominates" class="level2">
+<h2 class="anchored" data-anchor-id="except-where-irrigation-dominates">Except where irrigation dominates</h2>
+<p>Then I split the irrigated pixels by <em>how</em> irrigated they are.</p>
+<!-- FIGURE 4 — dose-response. The most important figure in the post.
+     dACC against irrigated-fraction bin, one line per lead time, with
+     confidence intervals. The 32- and 40-day lines should rise clearly. -->
+<div id="fig-dose" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-dose-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="dose_response.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-dose-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: Skill change against irrigated fraction. In cells more than half irrigated the correction helps, and the effect grows with lead time — where soil moisture matters most.
+</figcaption>
+</figure>
+</div>
+<p>In cells where more than half the area is irrigated, the correction improves skill by 0.013 anomaly correlation at 32-day lead, with a confidence interval that excludes zero. The effect grows steadily with irrigated fraction, and grows with lead time — exactly where soil moisture contributes most to the forecast in the first place.</p>
+<p>I want to be careful here. I ran 35 statistical tests across leads and pixel groups, and one crossing the 0.05 threshold is roughly what chance would produce. No single number in that figure is decisive on its own.</p>
+<p>What is harder to dismiss is the shape. The effect increases monotonically with irrigated fraction at every lead time. It increases with lead time within the most irrigated group. It is positive everywhere on irrigated pixels and flat on the control pixels that cannot respond. That coherence was predicted in advance by the dilution explanation, not discovered by staring at the table afterwards.</p>
+<p>So the honest summary: the correction does not change forecasts at 9 km across a mixed landscape, and it probably does help where irrigation dominates the pixel. Both halves matter.</p>
+</section>
+<section id="what-i-would-tell-someone-repeating-this" class="level2">
+<h2 class="anchored" data-anchor-id="what-i-would-tell-someone-repeating-this">What I would tell someone repeating this</h2>
+<p><strong>Five random seeds were not enough.</strong> I first ran this with five and got two conclusions that fifteen seeds overturned. The dose-response signal was there but too noisy to trust, and a stability difference between the two models that looked convincing at five seeds evaporated at fifteen — the confidence interval on the variance ratio went from apparently meaningful to spanning 1.0. Ten more runs changed the conclusion.</p>
+<p><strong>The control group did more work than the statistics.</strong> Scoring rainfed pixels, where both models receive byte-identical input, gave a noise floor that needed no distributional assumptions. Comparing the irrigated result against that is more convincing than any p-value, and it is what let me distinguish “no effect” from “an effect hidden by wide error bars.”</p>
+<p><strong>Design the test so it can refute your own explanation.</strong> I split by irrigated fraction specifically because dilution predicts an increasing gradient. A flat response would have told me the correction simply does not matter at any intensity. Building in a way to be wrong is uncomfortable, and it is the only reason the positive finding means anything.</p>
+<p><strong>A null is a result if you quantify it.</strong> “We found no effect” is not very useful. “We can rule out effects larger than 0.004–0.014 anomaly correlation” is something the next person can build on.</p>
+</section>
+<section id="where-this-goes" class="level2">
+<h2 class="anchored" data-anchor-id="where-this-goes">Where this goes</h2>
+<p>The obvious next step is finer resolution. Cai et al.&nbsp;(2026) recently produced 100 m root-zone soil moisture over US cropland, fine enough to resolve individual centre-pivot circles. If dilution is the explanation, the correction should matter there. If it still does not, dilution was the wrong story.</p>
+<p>There is also a loose thread. Forecasts remain worse in irrigated cropland even after correcting the soil moisture — the gap that motivated this in the first place does not close. That suggests the problem is not contaminated soil moisture at all, but that vegetation in irrigated fields is partly decoupled from weather. A farmer’s decision to irrigate is not something any soil moisture predictor can anticipate.</p>
+<hr>
+<p><em>Carried out at Michigan State University. Code and processing pipeline: [shared on request.</em></p>
 
 
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="cmVzZWFyY2glMkNkcm91Z2h0JTJDcmVtb3RlJTIwc2Vuc2luZyUyQ2RlZXAlMjBsZWFybmluZw==" data-listing-date-sort="1788652800000" data-listing-file-modified-sort="1788668310350" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1283">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/posts/irrigation-drought-forecasting/index.html" class="no-external">Does correcting irrigation in satellite soil moisture improve drought forecasts?</a>
-</h3>
-<div class="delink listing-description"><a href="../blog/posts/irrigation-drought-forecasting/index.html" class="no-external">
-<p>A controlled test over US croplands, and what a null result taught me about scale.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../blog/posts/irrigation-drought-forecasting/index.html" class="no-external">
-<div class="listing-date">
-Sep 6, 2026
-</div>
-<div class="listing-reading-time">7 min</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="YW5ub3VuY2VtZW50" data-listing-date-sort="1788566400000" data-listing-file-modified-sort="1788668310351" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="45">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/posts/welcome/index.html" class="no-external">Welcome to the blog</a>
-</h3>
-<div class="delink listing-description"><a href="../blog/posts/welcome/index.html" class="no-external">
-<p>A short one-line teaser that shows up in the blog listing.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../blog/posts/welcome/index.html" class="no-external">
-<div class="listing-date">
-Sep 5, 2026
-</div>
-<div class="listing-reading-time">1 min</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
