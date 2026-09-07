@@ -197,5 +197,4 @@ departure from the local surround is −0.451 in humid neighbourhoods against
 filled as zero, not from a coordinate shift.
 ---
 
-*Code, processing pipeline and the per-seed results behind every figure: chrystali2002/conus-drought-forecasting.*
-
+*Code, processing pipeline and the per-seed results behind every figure: [chrystali2002/conus-drought-forecasting](https://github.com/chrystali2002/conus-drought-forecasting).*
