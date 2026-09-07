@@ -2,17 +2,16 @@
 title: "Repositories"
 ---
 
-The repos below are pulled live from GitHub — stars, description, and
-language update automatically. The list itself is just the names of your
-pinned repos; edit the `pinnedRepos` array below to match whatever you've
-pinned on your [GitHub profile](https://github.com/chrystali2002).
+Pulled live from GitHub — stars, description, and
+language update automatically. 
 
 ```{ojs}
 //| echo: false
 pinnedRepos = [
   "Olusegun-Python-Toolkit",
   "ascende-network",
-   "nm-app"
+  "nm-app",
+  "conus-drought-forecasting" 
   // add more repo names here, exactly as they appear in the GitHub URL
 ]
 ```
