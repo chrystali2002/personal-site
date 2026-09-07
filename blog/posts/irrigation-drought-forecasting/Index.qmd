@@ -121,6 +121,10 @@ I want to be careful here. I ran 35 statistical tests across leads and pixel
 groups, and one crossing the 0.05 threshold is roughly what chance would produce.
 No single number in that figure is decisive on its own.
 
+
+The cells above 50% irrigated fraction are also concentrated in Nebraska and Kansas — 88% of them, mostly along the Platte and in the central Kansas irrigation district — rather than spread across the irrigated West, where the Columbia Basin contributes two cells and the Central Valley nine. This gradient therefore reflects a few regions more than a national pattern.
+
+
 What is harder to dismiss is the shape. The effect increases monotonically with
 irrigated fraction at every lead time. It increases with lead time within the
 most irrigated group. It is positive everywhere on irrigated pixels and flat on
