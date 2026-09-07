@@ -78,7 +78,7 @@ hangouts.
 
 ## Latest from the blog
 
-*(This section can later be replaced with an auto-generated listing —
-see `blog/index.qmd`.)*
+*(Please watch out as I will later replace this section with an auto-generated listing)*
 
-- [Welcome to the blog](blog/posts/welcome/index.qmd) — first post placeholder
+- [Welcome to the blog](blog/posts/welcome/index.qmd) 
+- [Does correcting irrigation in satellite soil moisture improve drought forecasts?](blog/posts/irrigation-drought-forecasting/Index.qmd)
