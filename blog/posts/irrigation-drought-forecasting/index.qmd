@@ -153,6 +153,25 @@ reason the positive finding means anything.
 useful. "We can rule out effects larger than 0.004–0.014 anomaly correlation" is
 something the next person can build on.
 
+
+**Check your inputs late, not just early. After the analysis was finished I
+noticed a handful of cells in Virginia sitting in a dryland domain — in a
+region that averages roughly four times wetter than the threshold allows. They
+turned out to be a symptom. The aridity map I used to define the study area had
+been aggregated from 30-metre pixels to 9-kilometre cells, and water appears to
+have been counted as zero rather than skipped. Every cell touching a coastline
+came out drier than it really is, in proportion to how much water was in it[^aridity].
+
+
+
+Across the whole map, cells classed as hyper-arid — a category the US barely
+contains — are 27 times more common within one cell of water than elsewhere.
+
+**That affects 46 of my 3,093 cells, all of them barely irrigated, so the
+irrigation result is untouched. But I only found it because a figure I was making
+for this post plotted the domain in a way an earlier figure had not. Had I not
+made that figure, it would have gone unnoticed.
+
 ## Where this goes
 
 The obvious next step is finer resolution. Cai et al. (2026) recently produced
@@ -167,8 +186,12 @@ at all, but that vegetation in irrigated fields is partly decoupled from weather
 A farmer's decision to irrigate is not something any soil moisture predictor can
 anticipate.
 
+[^aridity]: The signature is multiplicative rather than additive: median
+departure from the local surround is −0.451 in humid neighbourhoods against
+−0.048 in arid ones, which is what you get from area-averaging with nodata
+filled as zero, not from a coordinate shift.
 ---
 
 *Carried out at Michigan State University. Code and processing pipeline:
-[shared on request.*
+[shared on requesti].*
 
