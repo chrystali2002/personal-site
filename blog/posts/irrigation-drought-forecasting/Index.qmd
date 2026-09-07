@@ -35,7 +35,10 @@ the contiguous United States, 8 to 40 days ahead.
      The 3,093-cell domain shaded by irrigated fraction, with the aridity
      boundary drawn. Orients the reader before any results appear. -->
 ![The study domain: 3,093 cells across semi-arid US cropland, shaded by irrigated
-fraction from the Landsat-based Irrigation Dataset.](domain_map.png){#fig-domain}
+fraction from the Landsat-based Irrigation Dataset. Fifteen cells over open water
+lack satellite soil moisture and are excluded from the skill results, leaving
+3,078 evaluated.](domain_map.png){#fig-domain}
+
 
 The inputs are SMAP Level-4 root-zone soil moisture, MODIS NIRv (a vegetation
 index tied closely to photosynthesis), irrigated fraction from the Landsat-based
