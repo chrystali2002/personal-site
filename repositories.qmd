@@ -34,8 +34,8 @@ html`${repos.map(r => `
     <span class="pill">${r.language ?? "—"}</span>
     <span class="pill">★ ${r.stargazers_count}</span>
     <span class="pill">Updated ${new Date(r.updated_at).toLocaleDateString()}</span>
+    ${r.homepage ? `<p><a href="${r.homepage}">Write-up →</a></p>` : ""}
   </div>
 `).join("")}`
 ```
-
 *If this list doesn't load (e.g. viewing offline), see the [static project highlights](projects.qmd) instead.*
