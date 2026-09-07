@@ -167,15 +167,8 @@ it[^aridity]. Across the whole map, cells classed as hyper-arid — a category t
 US barely contains — are 27 times more common within one cell of water than
 elsewhere.
 
-That affects 46 of my 3,093 cells, all of them barely irrigated, so the
-irrigation result is untouched. Removing them raises domain-averaged skill by
-0.003 — less than half the spread across random initialisations — and moves the
-irrigation result by 0.0001 or less; they made the model look slightly worse, not
-better. But I only found it because a figure I was making for this post plotted
-the domain in a way an earlier figure had not. Had I not made that figure, it
-would have gone unnoticed.
 
-
+That affects 46 of my 3,093 cells. Removing them raises domain-averaged skill by 0.001 — less than half the spread across random initialisations — and moves the irrigation result by 0.0001 or less; they made the model look slightly worse, not better. Only two reach an irrigated fraction above 0.15, so the irrigation comparison is essentially untouched. But I only found any of this because a figure I was making for this post plotted the domain in a way an earlier figure had not. Had I not made that figure, it would have gone unnoticed.
 
 ## Where this goes
 
