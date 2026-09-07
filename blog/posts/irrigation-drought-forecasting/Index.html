@@ -218,7 +218,6 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#the-answer-mostly" id="toc-the-answer-mostly" class="nav-link" data-scroll-target="#the-answer-mostly">The answer, mostly</a></li>
   <li><a href="#except-where-irrigation-dominates" id="toc-except-where-irrigation-dominates" class="nav-link" data-scroll-target="#except-where-irrigation-dominates">Except where irrigation dominates</a></li>
   <li><a href="#what-i-would-tell-someone-repeating-this" id="toc-what-i-would-tell-someone-repeating-this" class="nav-link" data-scroll-target="#what-i-would-tell-someone-repeating-this">What I would tell someone repeating this</a></li>
-  <li><a href="#where-this-goes" id="toc-where-this-goes" class="nav-link" data-scroll-target="#where-this-goes">Where this goes</a></li>
   </ul>
 </nav>
     </div>
@@ -282,7 +281,7 @@ Figure&nbsp;1: The study domain: 3,093 cells across semi-arid US cropland, shade
 </figure>
 </div>
 <p>The inputs are SMAP Level-4 root-zone soil moisture, MODIS NIRv (a vegetation index tied closely to photosynthesis), irrigated fraction from the Landsat-based Irrigation Dataset, and three climate indices. The target is the NIRv anomaly — how far vegetation sits from normal for that place and time of year.</p>
-<p>Trained on 2015–2021, validated on 2022, tested on a completely held-out 2023–2024. Anomaly correlation of 0.50 averaged across lead times, 0.66 at eight days, and a 23% reduction in error against climatology.</p>
+<p>Trained on 2015–2021, validated on 2022, tested on a completely held-out 2023–2024. Anomaly correlation of 0.50 averaged across lead times, 0.66 at eight days, and a 14% reduction in error against climatology, from 25% at eight days to 7% at forty.</p>
 <!-- FIGURE 2 — skill vs lead time.
      ACC against lead for the full model and the NIRv-only baseline, with a
      shaded band for the spread across 15 seeds. The "it works" figure. -->
@@ -350,15 +349,12 @@ Figure&nbsp;4: Skill change against irrigated fraction. In cells more than half 
 <p><strong>The control group did more work than the statistics.</strong> Scoring rainfed pixels, where both models receive byte-identical input, gave a noise floor that needed no distributional assumptions. Comparing the irrigated result against that is more convincing than any p-value, and it is what let me distinguish “no effect” from “an effect hidden by wide error bars.”</p>
 <p><strong>Design the test so it can refute your own explanation.</strong> I split by irrigated fraction specifically because dilution predicts an increasing gradient. A flat response would have told me the correction simply does not matter at any intensity. Building in a way to be wrong is uncomfortable, and it is the only reason the positive finding means anything.</p>
 <p><strong>A null is a result if you quantify it.</strong> “We found no effect” is not very useful. “We can rule out effects larger than 0.004–0.014 anomaly correlation” is something the next person can build on.</p>
-<p>**Check your inputs late, not just early. After the analysis was finished I noticed a handful of cells in Virginia sitting in a dryland domain — in a region that averages roughly four times wetter than the threshold allows. They turned out to be a symptom. The aridity map I used to define the study area had been aggregated from 30-metre pixels to 9-kilometre cells, and water appears to have been counted as zero rather than skipped. Every cell touching a coastline came out drier than it really is, in proportion to how much water was in it<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</p>
-<p>Across the whole map, cells classed as hyper-arid — a category the US barely contains — are 27 times more common within one cell of water than elsewhere.</p>
-<p>**That affects 46 of my 3,093 cells, all of them barely irrigated, so the irrigation result is untouched. But I only found it because a figure I was making for this post plotted the domain in a way an earlier figure had not. Had I not made that figure, it would have gone unnoticed.</p>
-</section>
-<section id="where-this-goes" class="level2">
-<h2 class="anchored" data-anchor-id="where-this-goes">Where this goes</h2>
+<p><strong>Check your inputs late, not just early.</strong> After the analysis was finished I noticed a handful of cells in Virginia sitting in a <em>dryland</em> domain — in a region that averages roughly four times wetter than the threshold allows. They turned out to be a symptom. The aridity map I used to define the study area had been aggregated from 30-metre pixels to 9-kilometre cells, and water appears to have been counted as zero rather than skipped. Every cell touching a coastline came out drier than it really is, in proportion to how much water was in it<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. Across the whole map, cells classed as hyper-arid — a category the US barely contains — are 27 times more common within one cell of water than elsewhere.</p>
+<p>That affects 46 of my 3,093 cells, all of them barely irrigated, so the irrigation result is untouched. Removing them raises domain-averaged skill by 0.003 — less than half the spread across random initialisations — and moves the irrigation result by 0.0001 or less; they made the model look slightly worse, not better. But I only found it because a figure I was making for this post plotted the domain in a way an earlier figure had not. Had I not made that figure, it would have gone unnoticed.</p>
+<p>Removing those cells raises domain-averaged skill by 0.003 — less than half the spread across random initialisations — and moves the irrigation result by 0.0001 or less. They made the model look slightly worse, not better. ## Where this goes</p>
 <p>The obvious next step is finer resolution. Cai et al.&nbsp;(2026) recently produced 100 m root-zone soil moisture over US cropland, fine enough to resolve individual centre-pivot circles. If dilution is the explanation, the correction should matter there. If it still does not, dilution was the wrong story.</p>
 <p>There is also a loose thread. Forecasts remain worse in irrigated cropland even after correcting the soil moisture — the gap that motivated this in the first place does not close. That suggests the problem is not contaminated soil moisture at all, but that vegetation in irrigated fields is partly decoupled from weather. A farmer’s decision to irrigate is not something any soil moisture predictor can anticipate.</p>
-<p><em>Carried out at Michigan State University. Code and processing pipeline: [shared on requesti].</em></p>
+<p><em>Carried out at Michigan State University. Code and processing pipeline: [shared on request].</em></p>
 
 
 </section>
