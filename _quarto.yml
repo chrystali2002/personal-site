@@ -15,6 +15,8 @@ website:
         href: index.qmd
       - text: "About"
         href: about.qmd
+      - text: "Coursework"
+        href: coursework.qmd
       - section: "Work"
         contents:
           - text: "Publications"
