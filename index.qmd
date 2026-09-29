@@ -82,3 +82,4 @@ hangouts.
 
 - [Welcome to the blog](blog/posts/welcome/index.qmd) 
 - [Does correcting irrigation in satellite soil moisture improve drought forecasts?](blog/posts/irrigation-drought-forecasting/Index.qmd)
+- [Climate-Driven Changes in Cocoa and Arabica Coffee Allocation Across West Africa](blog/posts/cocoa-coffee-west-Africa/index.qmd)
