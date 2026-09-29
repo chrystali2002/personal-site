@@ -197,6 +197,16 @@
     ]
   },
   {
+    "objectID": "blog/index.html",
+    "href": "blog/index.html",
+    "title": "Blog",
+    "section": "",
+    "text": "1 min\n\n\n\n\n\n\nDoes correcting irrigation in satellite soil moisture improve drought forecasts?\n\n\nA controlled test over US croplands, and what a null result taught me about scale.\n\n\n\n\n\nSep 6, 2026\n\n8 min\n\n\n\n\n\n\nWelcome to the blog\n\n\nWelcome to my personal website. This blog highlights research questions, experiments, and ideas that I investigate out of curiosity. Some may never become published studies, but they are still meaningful explorations that deserve to be documented. Research is something I genuinely enjoy, both professionally and as a hobby.\n\n\n\n\n\nSep 5, 2026\n\n1 min\n\n\n\n\n\n\nClimate-Driven Changes in Cocoa and Arabica Coffee Allocation Across West Africa\n\n\nUnpublished analysis: modeling how climate-correlated cocoa and coffee allocation may shift across West Africa through 2070.\n\n\n\n\n\nSep 1, 2026\n\n6 min\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Blog"
+    ]
+  },
+  {
     "objectID": "blog/posts/cocoa-coffee-west-africa/index.html",
     "href": "blog/posts/cocoa-coffee-west-africa/index.html",
     "title": "Climate-Driven Changes in Cocoa and Arabica Coffee Allocation Across West Africa",
@@ -258,16 +268,6 @@
     "title": "Climate-Driven Changes in Cocoa and Arabica Coffee Allocation Across West Africa",
     "section": "Why this matters",
     "text": "Why this matters\nCocoa supports the livelihoods of millions of smallholder farmers across Côte d’Ivoire, Ghana, and neighboring countries, and West Africa supplies roughly two-thirds of global cocoa production. Understanding where climate conditions may become more or less associated with current production patterns is therefore important for adaptation planning, agricultural investment, extension services, and long-term livelihood resilience.\nBeyond the specific findings, this project demonstrates an end-to-end climate impact assessment workflow: integrating gridded agricultural data, downscaled climate projections, machine-learning models, spatial validation strategies, multi-model uncertainty analysis, and environmental novelty diagnostics. Together, these approaches provide a transparent framework for assessing both projected change and the confidence that can reasonably be placed in those projections.\nMethods, data, and results described here are unpublished. If you would like to discuss the analysis, methods, or broader workflow in more detail, feel free to get in touch."
-  },
-  {
-    "objectID": "blog/index.html",
-    "href": "blog/index.html",
-    "title": "Blog",
-    "section": "",
-    "text": "Does correcting irrigation in satellite soil moisture improve drought forecasts?\n\n\nA controlled test over US croplands, and what a null result taught me about scale.\n\n\n\n\n\nSep 6, 2026\n\n8 min\n\n\n\n\n\n\nWelcome to the blog\n\n\nWelcome to my personal website. This blog highlights research questions, experiments, and ideas that I investigate out of curiosity. Some may never become published studies, but they are still meaningful explorations that deserve to be documented. Research is something I genuinely enjoy, both professionally and as a hobby.\n\n\n\n\n\nSep 5, 2026\n\n1 min\n\n\n\n\n\n\nClimate-Driven Changes in Cocoa and Arabica Coffee Allocation Across West Africa\n\n\nUnpublished analysis: modeling how climate-correlated cocoa and coffee allocation may shift across West Africa through 2070.\n\n\n\n\n\nSep 1, 2026\n\n6 min\n\n\n\n\nNo matching items",
-    "crumbs": [
-      "Blog"
-    ]
   },
   {
     "objectID": "blog/posts/irrigation-drought-forecasting/Index.html",
