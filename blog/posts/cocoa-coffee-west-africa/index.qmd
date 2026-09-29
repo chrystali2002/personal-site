@@ -5,7 +5,7 @@ date: 2026-09-01
 categories: [unpublished-work, machine-learning, west-africa, agriculture]
 ---
 
-Cocoa and arabica coffee are two of West Africa's most climate-sensitive export crops, and both are grown largely within a relatively narrow range of temperature and rainfall conditions. This post shares an unpublished analysis I carried out to model how the climate-correlated spatial allocation of these crops may change across the region by 2030 (2011 - 2040), 2050 (2041 - 2070) , and 2070 (2071 -2100). Although the work was never submitted for publication, the methods, validation, and results are documented here as a record of the analysis and the scientific workflow behind it.
+Cocoa and arabica coffee are two of West Africa's most climate-sensitive export crops, and both are grown largely within a relatively narrow range of temperature and rainfall conditions. This post shares an unpublished analysis I carried out to model how the climate-correlated spatial allocation of these crops may change across the region by 2030, 2050, and 2070. Although the work was never submitted for publication, the methods, validation, and results are documented here as a record of the analysis and the scientific workflow behind it.
 
 ## Aim
 
@@ -16,6 +16,7 @@ To model the climate-correlated spatial distribution of cocoa and arabica coffee
 - **Allocation data:** [MapSPAM](https://www.mapspam.info/) 2010 global gridded harvested-area allocation data from the Spatial Production Allocation Model (SPAM), providing crop-specific harvested-area estimates at approximately 10 km spatial resolution.
 
 - **Historical climate predictors:** [CHELSA](https://chelsa-climate.org/) V2.1 climatology. Climate data for the 1981–2010 reference period, available at 30 arc-second (~1 km) resolution and aggregated to the SPAM grid for modeling.
+
 
 - **Future climate predictors:** CHELSA-downscaled CMIP6 projections from five GCMs under SSP3-7.0 and SSP5-8.5, spanning 2015–2100.
 
@@ -93,11 +94,60 @@ By 2070 under SSP5-8.5, much of West Africa is projected to experience climate c
 
 This does not invalidate the projections in those locations. Rather, it highlights where future predictions rely increasingly on analogies to environmental conditions that were absent from the training data. Consequently, late-century projections should be interpreted with greater caution than projections occurring within well-represented portions of climate space.
 
+## Arabica coffee: historical validation
+
+::: {#fig-arabica-historical}
+![](images/fig6-arabica-historical.png)
+
+MapSPAM 2010 reference allocation (left) alongside the model's spatially cross-validated out-of-fold prediction (right) for arabica coffee. The color scale represents harvested area as a percentage of total grid-cell area.
+:::
+
+Arabica coffee occupies a much smaller and more geographically concentrated footprint than cocoa across West Africa, with the historical allocation concentrated in the eastern part of the domain. The model reproduces this eastern concentration, though — as with cocoa — the predicted distribution is more diffuse and extends further into areas with little or no observed allocation in the MapSPAM reference. These predictions again represent climate-correlated patterns rather than direct estimates of ecological suitability or confirmed cultivation.
+
+## Arabica coffee: projected change
+
+::: {#fig-arabica-change}
+![](images/fig7-arabica-change-map.png)
+
+Projected percentage-point change in arabica coffee allocation for 2030, 2050, and 2070 under SSP3-7.0 (top row) and SSP5-8.5 (bottom row), relative to the matched historical prediction.
+:::
+
+The percentage-point scale here is far narrower than for cocoa, reflecting arabica's much smaller harvested-area fractions overall. Within that narrow scale, projected changes show widespread small increases across much of the domain, while more concentrated declines appear within parts of the existing eastern allocation region — the same area where historical allocation is most established.
+
+## Arabica coffee: where the climate models agree
+
+::: {#fig-arabica-agreement}
+![](images/fig8-arabica-gcm-agreement.png)
+
+Agreement among the five GCMs on the direction of projected arabica coffee allocation change.
+:::
+
+Increase agreement dominates across most of the domain by mid- to late century, while agreement on decreases remains concentrated within the eastern historical allocation belt. This pattern — broad agreement on modest gains outside the existing coffee-growing area alongside more confident losses within it — is consistent across both emissions scenarios.
+
+## Arabica coffee: regional uncertainty
+
+::: {#fig-arabica-uncertainty}
+![](images/fig9-regional-arabica-uncertainty.png)
+
+Five-GCM range in regionally aggregated arabica coffee harvested-area change (percentage), by scenario and period. Filled circles show the five-GCM mean, open diamonds the median, and vertical lines the full minimum-to-maximum range.
+:::
+
+Regional arabica change is mixed in 2030, with individual GCMs disagreeing on direction. That disagreement resolves quickly: by 2050, all five GCMs project a regional loss under SSP3-7.0, and four of five do so under SSP5-8.5. By 2070, both scenarios show unanimous agreement on loss, with projected declines larger under SSP5-8.5 than under SSP3-7.0.. The widening ranges toward late century indicate that while GCMs agree on the direction of change, they still disagree considerably on its magnitude.
+
+## Arabica coffee: environmental novelty
+
+::: {#fig-arabica-mess}
+![](images/fig10-arabica-mess-diagnostic.png)
+
+Cross-GCM agreement on environmental novelty for future arabica coffee projections, measured using the MESS diagnostic.
+:::
+
+Applying the same MESS diagnostic to the arabica model's training domain produces a pattern very similar to the cocoa result, which makes sense: environmental novelty is primarily a function of how far the CMIP6 climate projections themselves depart from the historical CHELSA record, not of which crop the allocation model was trained to predict. The same conclusion follows here — late-century projections, particularly under SSP5-8.5, increasingly ask the model to extrapolate beyond the climate conditions it was trained on, and should be read with that caveat in mind.
+
 ## Why this matters
 
-Cocoa supports the livelihoods of millions of smallholder farmers across Côte d'Ivoire, Ghana, and neighboring countries, and West Africa supplies roughly two-thirds of global cocoa production. Understanding where climate conditions may become more or less associated with current production patterns is therefore important for adaptation planning, agricultural investment, extension services, and long-term livelihood resilience.
+Taken together, the results suggest that both cocoa and arabica coffee may face increasing climate-related pressures across parts of their current production regions by late century, while climate-model uncertainty and environmental novelty become increasingly important considerations when interpreting projections. Identifying where models consistently indicate change, and where projections rely on extrapolation beyond historical climate conditions, is essential for developing robust adaptation strategies.
 
-Beyond the specific findings, this project demonstrates an end-to-end climate impact assessment workflow: integrating gridded agricultural data, downscaled climate projections, machine-learning models, spatial validation strategies, multi-model uncertainty analysis, and environmental novelty diagnostics. Together, these approaches provide a transparent framework for assessing both projected change and the confidence that can reasonably be placed in those projections.
+Beyond the specific findings, this project demonstrates an end-to-end climate impact assessment workflow: integrating gridded agricultural data, downscaled climate projections, machine-learning models, spatial validation strategies, multi-model uncertainty analysis, and environmental novelty diagnostics. Together, these approaches provide a transparent framework for assessing projected change while clearly communicating the uncertainties associated with those projections.
 
 *Methods, data, and results described here are unpublished. If you would like to discuss the analysis, methods, or broader workflow in more detail, feel free to get in touch.*
-
