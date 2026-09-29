@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2026-09-01">
+<meta name="description" content="Unpublished analysis: modeling how climate-correlated cocoa and coffee allocation may shift across West Africa through 2070.">
 
-<title>index – Christiana F. Olusegun</title>
+<title>Climate-Driven Changes in Cocoa and Arabica Coffee Allocation Across West Africa – Christiana F. Olusegun</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -212,17 +214,164 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#aim" id="toc-aim" class="nav-link active" data-scroll-target="#aim">Aim</a></li>
+  <li><a href="#data-and-methods" id="toc-data-and-methods" class="nav-link" data-scroll-target="#data-and-methods">Data and methods</a></li>
+  <li><a href="#historical-validation" id="toc-historical-validation" class="nav-link" data-scroll-target="#historical-validation">Historical validation</a></li>
+  <li><a href="#projected-change" id="toc-projected-change" class="nav-link" data-scroll-target="#projected-change">Projected change</a></li>
+  <li><a href="#where-the-climate-models-agree" id="toc-where-the-climate-models-agree" class="nav-link" data-scroll-target="#where-the-climate-models-agree">Where the climate models agree</a></li>
+  <li><a href="#regional-uncertainty" id="toc-regional-uncertainty" class="nav-link" data-scroll-target="#regional-uncertainty">Regional uncertainty</a></li>
+  <li><a href="#how-far-outside-known-conditions-are-we-asking-the-model-to-predict" id="toc-how-far-outside-known-conditions-are-we-asking-the-model-to-predict" class="nav-link" data-scroll-target="#how-far-outside-known-conditions-are-we-asking-the-model-to-predict">How far outside known conditions are we asking the model to predict?</a></li>
+  <li><a href="#why-this-matters" id="toc-why-this-matters" class="nav-link" data-scroll-target="#why-this-matters">Why this matters</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Climate-Driven Changes in Cocoa and Arabica Coffee Allocation Across West Africa</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">unpublished-work</div>
+    <div class="quarto-category">machine-learning</div>
+    <div class="quarto-category">west-africa</div>
+    <div class="quarto-category">agriculture</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    Unpublished analysis: modeling how climate-correlated cocoa and coffee allocation may shift across West Africa through 2070.
+  </div>
+</div>
 
 
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">September 1, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
 
 
+</header>
 
 
+<p>Cocoa and arabica coffee are two of West Africa’s most climate-sensitive export crops, and both are grown largely within a relatively narrow range of temperature and rainfall conditions. This post shares an unpublished analysis I carried out to model how the climate-correlated spatial allocation of these crops may change across the region by 2030, 2050, and 2070. Although the work was never submitted for publication, the methods, validation, and results are documented here as a record of the analysis and the scientific workflow behind it.</p>
+<section id="aim" class="level2">
+<h2 class="anchored" data-anchor-id="aim">Aim</h2>
+<p>To model the climate-correlated spatial distribution of cocoa and arabica coffee harvested-area allocation across West Africa and evaluate projected changes, inter-GCM agreement, and regional uncertainty under two future climate scenarios (SSP3-7.0 and SSP5-8.5).</p>
+</section>
+<section id="data-and-methods" class="level2">
+<h2 class="anchored" data-anchor-id="data-and-methods">Data and methods</h2>
+<ul>
+<li><p><strong>Allocation data:</strong> <a href="https://www.mapspam.info/">MapSPAM</a> 2010 global gridded harvested-area allocation data from the Spatial Production Allocation Model (SPAM), providing crop-specific harvested-area estimates at approximately 10 km spatial resolution.</p></li>
+<li><p><strong>Historical climate predictors:</strong> https://chelsa-climate.org/ V2.1 climatology. Climate data for the 1981–2010 reference period, available at 30 arc-second (~1 km) resolution and aggregated to the SPAM grid for modeling.</p></li>
+<li><p><strong>Future climate predictors:</strong> CHELSA-downscaled CMIP6 projections from five GCMs under SSP3-7.0 and SSP5-8.5, spanning 2015–2100.</p></li>
+<li><p><strong>Topography:</strong> WorldClim 2.1 elevation.</p></li>
+<li><p><strong>Predictors:</strong> Eleven bioclimatic variables describing temperature and precipitation means, seasonality, and extremes, together with elevation.</p></li>
+<li><p><strong>Model:</strong> A two-part hurdle Random Forest. Harvested-area fraction contains many zero values and a smaller number of skewed positive values, making a single regression model poorly suited to represent both processes. The first component (classifier) estimates the probability that a grid cell contains any allocation. The second component (regressor) estimates the harvested-area fraction where allocation is present. Multiplying these components yields the expected harvested-area fraction.</p></li>
+<li><p><strong>Validation:</strong> Spatial block cross-validation using 1° geographic blocks. The study region was divided into geographic blocks, each withheld in turn and predicted using models trained on the remaining blocks. This provides a more realistic assessment of spatial transferability than random cross-validation because predictions are evaluated in locations not used for model training.</p></li>
+<li><p><strong>Uncertainty:</strong> Projected changes were evaluated across five GCMs and summarized using the ensemble mean, median, and full range. Directional agreement was also quantified as the number of GCMs agreeing on the sign of change in each grid cell.</p></li>
+</ul>
+</section>
+<section id="historical-validation" class="level2">
+<h2 class="anchored" data-anchor-id="historical-validation">Historical validation</h2>
+<div id="fig-historical" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-historical-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/fig1-historical-cocoa.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-historical-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: MapSPAM 2010 reference allocation (left) alongside the model’s spatially cross-validated out-of-fold prediction (right).
+</figcaption>
+</figure>
+</div>
+<p>The model reproduces the broad cocoa-allocation belt across West Africa, though the predicted distribution is smoother and geographically more extensive than the MapSPAM reference. This is expected for a climate-correlated model: it captures where climate conditions resemble those found in existing cocoa-growing areas, rather than the finer-scale effects of land tenure, market access, infrastructure, policy, or historical land-use decisions that influence actual crop allocation.</p>
+<p>The predictions therefore represent climate-correlated patterns in current harvested-area allocation rather than direct estimates of ecological suitability.</p>
+</section>
+<section id="projected-change" class="level2">
+<h2 class="anchored" data-anchor-id="projected-change">Projected change</h2>
+<div id="fig-change" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-change-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/fig2-cocoa-change-map.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-change-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Projected percentage-point change in cocoa allocation for 2030, 2050, and 2070 under SSP3-7.0 (top row) and SSP5-8.5 (bottom row), relative to the matched historical prediction.
+</figcaption>
+</figure>
+</div>
+<p>Projected changes are spatially heterogeneous rather than uniform. Many grid cells show relatively small increases, but substantial declines are concentrated within parts of the current cocoa-allocation belt itself. These declines become more pronounced toward the end of the century under both climate scenarios.</p>
+<p>Changes are expressed in percentage points rather than relative percentages because harvested-area allocation is itself a percentage of the grid cell. Percentage-point differences provide a direct and interpretable measure of absolute changes in allocated area.</p>
+</section>
+<section id="where-the-climate-models-agree" class="level2">
+<h2 class="anchored" data-anchor-id="where-the-climate-models-agree">Where the climate models agree</h2>
+<div id="fig-agreement" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-agreement-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/fig3-cocoa-gcm-agreement.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-agreement-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Agreement among the five GCMs on the direction of projected cocoa allocation change. At least four of five models agreeing is considered strong agreement.
+</figcaption>
+</figure>
+</div>
+<p>Most locations show strong agreement on either near-zero change or an increase. Agreement on decreases is more geographically concentrated within specific portions of the historical cocoa belt, while areas with mixed signals among the five models remain comparatively limited.</p>
+<p>Agreement describes how consistently the climate models indicate the same direction of change. It should not be interpreted as a probability or confidence interval for the projected outcome itself.</p>
+</section>
+<section id="regional-uncertainty" class="level2">
+<h2 class="anchored" data-anchor-id="regional-uncertainty">Regional uncertainty</h2>
+<div id="fig-uncertainty" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-uncertainty-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/fig4-regional-cocoa-uncertainty-ha.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-uncertainty-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: Five-GCM range in regionally aggregated cocoa harvested-area change (hectares), by scenario and period. Filled circles show the five-GCM mean, open diamonds the median, and vertical lines the full minimum-to-maximum range.
+</figcaption>
+</figure>
+</div>
+<p>Regional cocoa change remains genuinely uncertain through 2050, with individual GCMs differing on whether the overall effect is a regional gain or loss. By 2070, however, that uncertainty narrows in one direction: all five GCMs project a regional loss under SSP3-7.0, and four of five project a loss under SSP5-8.5.</p>
+<p>These results suggest increasing consistency among climate models regarding the regional direction of change later in the century, even though the magnitude of that change remains uncertain.</p>
+</section>
+<section id="how-far-outside-known-conditions-are-we-asking-the-model-to-predict" class="level2">
+<h2 class="anchored" data-anchor-id="how-far-outside-known-conditions-are-we-asking-the-model-to-predict">How far outside known conditions are we asking the model to predict?</h2>
+<div id="fig-mess" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-mess-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/fig5-mess-diagnostic.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-mess-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5: Cross-GCM agreement on environmental novelty for future cocoa projections, measured using the Multivariate Environmental Similarity Surface (MESS) diagnostic, shown here for 2070 under SSP5-8.5.
+</figcaption>
+</figure>
+</div>
+<p>A model trained on historical climate conditions can still produce predictions when presented with a future climate it has never experienced. However, those predictions warrant greater caution as projected conditions move further away from the climatic range used during model training.</p>
+<p>The MESS diagnostic evaluates exactly this issue. For each grid cell and each GCM, it determines whether projected future climate conditions fall outside the range of historical predictor values available during model training. Negative MESS values indicate environmental novelty and therefore model extrapolation.</p>
+<p>By 2070 under SSP5-8.5, much of West Africa is projected to experience climate conditions that are unfamiliar to the historical cocoa-allocation model. More than three-fifths of grid cells show strong agreement among the five GCMs that at least some climatic conditions fall outside the historical range, while nearly one-third show unanimous agreement across all five models.</p>
+<p>This does not invalidate the projections in those locations. Rather, it highlights where future predictions rely increasingly on analogies to environmental conditions that were absent from the training data. Consequently, late-century projections should be interpreted with greater caution than projections occurring within well-represented portions of climate space.</p>
+</section>
+<section id="why-this-matters" class="level2">
+<h2 class="anchored" data-anchor-id="why-this-matters">Why this matters</h2>
+<p>Cocoa supports the livelihoods of millions of smallholder farmers across Côte d’Ivoire, Ghana, and neighboring countries, and West Africa supplies roughly two-thirds of global cocoa production. Understanding where climate conditions may become more or less favorable for existing production systems is therefore important for adaptation planning, agricultural investment, extension services, and long-term livelihood resilience.</p>
+<p>Beyond the specific findings, this project demonstrates an end-to-end climate impact assessment workflow: integrating gridded agricultural data, downscaled climate projections, machine-learning models, spatial validation strategies, multi-model uncertainty analysis, and environmental novelty diagnostics. Together, these approaches provide a transparent framework for assessing both projected change and the confidence that can reasonably be placed in those projections.</p>
+<p><em>Methods, data, and results described here are unpublished. If you would like to discuss the analysis, methods, or broader workflow in more detail, feel free to get in touch.</em></p>
+
+
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
