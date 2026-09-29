@@ -5,7 +5,7 @@ date: 2026-09-01
 categories: [unpublished-work, machine-learning, west-africa, agriculture]
 ---
 
-Cocoa and arabica coffee are two of West Africa's most climate-sensitive export crops, and both are grown largely within a relatively narrow range of temperature and rainfall conditions. This post shares an unpublished analysis I carried out to model how the climate-correlated spatial allocation of these crops may change across the region by 2030, 2050, and 2070. Although the work was never submitted for publication, the methods, validation, and results are documented here as a record of the analysis and the scientific workflow behind it.
+Cocoa and arabica coffee are two of West Africa's most climate-sensitive export crops, and both are grown largely within a relatively narrow range of temperature and rainfall conditions. This post shares an unpublished analysis I carried out to model how the climate-correlated spatial allocation of these crops may change across the region by 2030 (2011 - 2040), 2050 (2041 - 2070) , and 2070 (2071 -2100). Although the work was never submitted for publication, the methods, validation, and results are documented here as a record of the analysis and the scientific workflow behind it.
 
 ## Aim
 
@@ -95,7 +95,7 @@ This does not invalidate the projections in those locations. Rather, it highligh
 
 ## Why this matters
 
-Cocoa supports the livelihoods of millions of smallholder farmers across Côte d'Ivoire, Ghana, and neighboring countries, and West Africa supplies roughly two-thirds of global cocoa production. Understanding where climate conditions may become more or less favorable for existing production systems is therefore important for adaptation planning, agricultural investment, extension services, and long-term livelihood resilience.
+Cocoa supports the livelihoods of millions of smallholder farmers across Côte d'Ivoire, Ghana, and neighboring countries, and West Africa supplies roughly two-thirds of global cocoa production. Understanding where climate conditions may become more or less associated with current production patterns is therefore important for adaptation planning, agricultural investment, extension services, and long-term livelihood resilience.
 
 Beyond the specific findings, this project demonstrates an end-to-end climate impact assessment workflow: integrating gridded agricultural data, downscaled climate projections, machine-learning models, spatial validation strategies, multi-model uncertainty analysis, and environmental novelty diagnostics. Together, these approaches provide a transparent framework for assessing both projected change and the confidence that can reasonably be placed in those projections.
 
