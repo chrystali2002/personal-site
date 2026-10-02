@@ -13,7 +13,7 @@ toc: false
 ::: {.column width="72%"}
 ### Hi, I'm Christiana 👋
 
-I'm a Postdoctoral Research Scholar in the Department of Earth and
+I am a Postdoctoral Research Scholar in the Department of Earth and
 Environmental Sciences at Michigan State University. I study how the
 atmosphere, land surface, and terrestrial biosphere interact as a coupled
 system — and how that coupling shapes risk to agriculture, water resources,
@@ -28,17 +28,11 @@ and the continental United States.
 :::
 
 ::: {.callout-note appearance="simple" icon=false}
-## Open to opportunities
+## Open to Collaboration
 
-I'm seeking a permanent position where I can apply data analysis, Earth
-system modeling, and machine learning to problems with direct, measurable
-impact on livelihoods — across established and emerging sectors, from
-agriculture and water resources to climate risk and food security. I bring
-a decade of experience turning complex climate and geospatial data into
-decisions that matter, and I like building tools that make research usable
-well beyond the lab.
+I am passionate about understanding how climate variability and extreme events affect the environmental systems on which society depends. While advancing scientific understanding is a central goal of my work, I am equally motivated by ensuring that research informs actions that help communities, institutions, and decision-makers adapt to a changing climate.
 
-I'm a Nigerian citizen and I'm authorized to work in the United States.
+I welcome collaborations involving climate science, physical geography, hydroclimatology, environmental modeling, geospatial analysis, and climate-risk assessment, particularly where research can contribute to more resilient and sustainable environmental futures.
 
 [Get in touch →](contact.qmd)
 :::
@@ -47,9 +41,7 @@ I'm a Nigerian citizen and I'm authorized to work in the United States.
 
 ::: {.card-block}
 ### Vegetation–climate coupling & compound extremes
-Building an independent research program connecting mechanistic Earth system
-modeling to concrete consequences for food systems, water resources, and
-ecosystem resilience.
+Exploring how vegetation, climate variability, and extreme events interact across the Earth system, and how those interactions influence environmental change, climate risk, and adaptation.
 
 <span class="pill">CMIP6</span><span class="pill">CORDEX-CORE</span><span class="pill">Machine Learning</span>
 :::
