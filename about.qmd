@@ -3,73 +3,50 @@ title: "About"
 toc: true
 ---
 
-## Research profile
+## Research Profile
 
-I'm an Earth system scientist studying how the atmosphere, land surface, and
-terrestrial biosphere interact as a coupled system, and how that coupling
-shapes risk to agriculture, water resources, and ecosystems under a changing
-climate. I integrate regional-to-continental Earth system models (RegCM4,
-WRF, WRF-Hydro, and the Community Land Model), CMIP6 and CORDEX-CORE
-multi-model ensembles, statistical extremes analysis, and machine learning to
-study land–atmosphere–biosphere feedbacks and compound climate hazards
-across West Africa and the continental United States.
+I am a climate scientist and physical geographer interested in how climate variability, extreme events, and land-surface processes interact to shape environmental systems and human vulnerability. My research examines the coupled relationships among the atmosphere, land surface, water cycle, and terrestrial ecosystems, and how these interactions influence risks to agriculture, water resources, and ecosystem resilience under a changing climate.
 
-My work connects mechanistic Earth system modeling to concrete consequences
-for food systems, water resources, and ecosystem resilience — including
-impacts on species and natural systems beyond the human systems most directly
-studied. I'm building an independent research program centered on
-vegetation–climate coupling and compound extremes, with the goal of extending
-this integrated systems approach to new regions and research questions.
+To address these questions, I integrate Earth system modeling, climate projections, geospatial analysis, remote sensing, statistical methods, and machine learning. My work spans scales from local landscapes to continental systems and draws on tools including RegCM4, WRF, WRF-Hydro, the Community Land Model, CMIP6, and CORDEX-CORE ensembles. Across my research, I seek to combine physical understanding with quantitative analysis to better understand climate extremes, land-atmosphere interactions, and environmental change.
 
-## Research interests
+What motivates me most is the opportunity to transform complex climate data into knowledge that supports better decisions. Whether studying drought, heat extremes, hydrological change, land-cover dynamics, or agricultural systems, I am driven by questions that connect rigorous climate science with real-world environmental challenges and opportunities for adaptation and resilience.
 
-A simple question drives me: how does our changing climate, especially its
-extremes, affect the way we live and work? To answer this, I use a
-combination of climate models, remote sensing, field observation,
-statistics, and machine learning. My goal is to cut through the complexity
-and provide clear, actionable insights that build resilience — from the
-food we grow and the air we breathe to the energy we use.
+## Research Interests
 
-**Key areas of expertise:**
+A simple question motivates my work: how do climate variability and extreme events influence the environmental systems on which society depends?
 
+I investigate this question through a combination of climate modeling, remote sensing, field observations, geospatial analysis, statistical methods, and machine learning. My goal is not only to understand the processes driving environmental change, but also to produce knowledge that can inform adaptation, risk reduction, and long-term sustainability.
+
+**Key Areas of Interest:**
+- **Climate variability and extremes** - Droughts, heatwaves, compound hazards, hydroclimatic variability, and climate risk
+- **Land-atmosphere interactions** - Vegetation-climate feedbacks, land-cover change, hydrological processes, and environmental system dynamics
+- **Environmental change and resilience** - Climate impacts on agriculture, water resources, ecosystems, and human-environment systems
 - **Climate modeling & analysis** — Developing and analyzing simulations
   using regional models (WRF, RegCM4) and large ensembles (CMIP6,
   CORDEX-CORE) for robust geospatial diagnostics
+- **Geospatial and Earth system science** - Climate modeling, remote sensing, GIScience, machine learning, and large-scale environmental data analysis
 - **Climate data science** — Leveraging Python, R, and MATLAB, alongside
   geospatial tools (ArcGIS, ArcPy), for processing and analyzing
   large-scale atmospheric datasets
-- **Applied climate impacts** — Researching land–atmosphere interactions,
-  climate–agriculture relationships, and building data-driven frameworks
-  for environmental resilience
 
-## Career objective
 
-I'm currently seeking a **permanent position** — in academia, industry, or
-the public sector — where I can put data analysis, Earth system modeling,
-and machine learning to work on problems that directly improve livelihoods,
-whether in established sectors like agriculture and water management or in
-emerging data-driven fields tackling climate and environmental risk. I'm
-drawn to roles where research translates quickly into decisions, tools, or
-policy that people actually use.
+## Research Vision
+My long-term goal is to build an interdisciplinary research program that advances understanding of how climate variability, compound extremes, and land-surface change interact across environmental systems. I am particularly interested in developing approaches that combine Earth system science, geospatial analytics, and emerging data-driven methods to improve climate-risk assessment and support adaptation in a rapidly changing world.
+ 
+What excites me most is translating climate science into actionable knowledge. Whether for agricultural systems, water-resource management, ecosystem stewardship, or climate adaptation planning, I aim to produce research that not only advances scientific understanding but also supports informed decision-making. I am equally passionate about mentoring students, building collaborative research communities, and helping prepare the next generation of scientists to address complex environmental challenges.
 
-I'm a Nigerian citizen and I'm authorized to work in the United States.
+## Current Position
 
-## Current position
+Postdoctoral Research Scholar
+ Department of Earth & Environmental Sciences, Michigan State University
+ January 2024 – Present
 
-**Postdoctoral Research Scholar**, Department of Earth & Environmental
-Sciences, Michigan State University (January 2024 – Present)
+Lead research integrating climate and hydrological data for agricultural and environmental modeling across local, regional, and global scales using CMIP6 and CORDEX simulations.
+Apply machine learning, geospatial analysis, and climate data science to investigate climate hazards and environmental risk.
+Develop scalable computational frameworks for analyzing large climate and Earth-system datasets.
+Convening Chair, AGU 2026 Session: AI-Ensemble Modeling of Weather Extremes on Agricultural Production Systems.
+Co-convened AGU sessions on African hydrology and hydroclimatology in three consecutive years (AGU24, AGU25, and AGU26).
 
-- Lead research integrating climate and hydrological data for agricultural
-  modeling at country, regional, and global scales using CMIP6 and CORDEX
-  simulations
-- Apply machine learning (CNN, LSTM) and geospatial analytics to assess
-  natural hazard impacts on food and environmental systems
-- Develop and maintain scalable data pipelines translating complex climate
-  data into actionable insight for interdisciplinary teams
-- Convening Chair, AGU 2026 Session GC013: "AI-Ensemble Modeling of Weather
-  Extremes on Agricultural Production Systems"
-- Co-convened AGU sessions on African hydrology and hydroclimatology for
-  three consecutive years (AGU24, AGU25, AGU26)
 
 ## Academic path
 
